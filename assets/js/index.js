@@ -1,24 +1,61 @@
-var url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv";
-
-function extractLines(text) {
-    return text.split("\n");
-}
-function getHeaders(lines) {
-    var headers = lines[0]; // first line text
-    headers = headers.split(","); // array
-    return headers;
-}
-function getBodyCells(lines) {
-    lines.shift(1); // remove first line;
-    lines = lines.map(line=>{
-        return line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/); // array and ignore commas within double-quotes 
-    })
-    return lines;
-}
-
+window.url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv";
 window.overrides = [];
 window.activeOverride = {};
-window.urls = {};
+window.urls = {}; // urls in overrides-data
+
+class LineHelpers {
+    constructor() {
+        this.extractLines = (text) => {
+            return text.split("\n");
+        }
+        this.getHeaders = (lines) => {
+            var headers = lines[0]; // first line text
+            headers = headers.split(","); // array
+            return headers;
+        }
+        this.getBodyCells = (lines) => {
+            lines.shift(1); // remove first line;
+            lines = lines.map(line=>{
+                return line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/); // array and ignore commas within double-quotes 
+            })
+            return lines;
+        };
+    } // constructor
+}
+
+class ElementHelpers {
+    constructor() {
+        /**
+         * Create the Title format seen above graphs
+         * @param {string} sp State/Province
+         * @param {string} cr Country/Region
+         * @param {string} lat Coordinate
+         * @param {string} long Coordinate
+         */
+        this.createTitle = (sp, cr, lat, long, newLine) => {
+            // Don't assume the csv is not messed up on some lines
+            if(typeof sp==="undefined" || typeof lat==="undefined" || typeof long==="undefined") return;
+    
+            // Some long/lats are just too long
+            if(lat.toString().length>8) lat = lat.toString().substr(0,8);
+            if(long.toString().length>8) long = long.toString().substr(0,8);
+    
+            var name = (sp.length?sp+", ":"") + cr;
+            var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
+    
+            // if(named.indexOf("Los Angeles")!==-1) { debugger; } // Tester
+            return name + coords;
+        } // createTile
+        /**
+         * This will eliminate CSV conventions so the text can make sense in a DOM.
+         *  - Some CSV entries have double quotation marks to have the comma as part of the value. Some have trailing spaces that may be API glitches on their side.
+         * @param {String} text the string that needs to be sanitized of CSV conventions 
+         */
+        this.sanitizeCsv = (text) => {
+            return text.replace(/"/g, "").replace(/^\s{1,}/g, "").replace(/\s{1,}$/g, "");
+        }
+    } // constructor
+}
 
 /**
  * Make an array of objects with the keys from the headers
@@ -26,60 +63,36 @@ window.urls = {};
  * @param {array String} tbody Array of values
  */
 function makeArrayObjects(thead, tbody) {
+    var elh = new ElementHelpers();
 
-    function createTitle(sp, cr, lat, long, newLine) {
-        // debugger;
-        // debugger;
-        // Don't assume the csv is not messed up on some lines
-        if(typeof sp==="undefined" || typeof lat==="undefined" || typeof long==="undefined") return;
-        // try {
-            if(lat.toString().length>8) lat = lat.toString().substr(0,8);
-            if(long.toString().length>8) long = long.toString().substr(0,8);
-        // } catch {
-        //     debugger;
-        // }
-        var named = sp.length?sp+", ":"";
-        named += cr;
-        var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
-        // if(named.indexOf("Los Angeles")!==-1) {
-        //     debugger;
-        // }
-        return named + coords;
-    }
     tbody = tbody.map(function(line) {
         var newLine = {};
-
-        // if(line[0].indexOf("Los Angeles")!==-1) {
-        //     debugger;
-        // }
+        // if(named.indexOf("Los Angeles")!==-1) { debugger; } // Tester
 
         line.forEach( function(val,i) {
             var key = thead[i];
-            // if(i>=59) debugger;
-            key = key.replace(/"/g, "").replace(/^\s{1,}/g, "").replace(/\s{1,}$/g, ""); // Some CSV entries have double quotation marks to have the comma as part of the value so cleaning it up for DOM text. Some have glitching trailing spaces.
-            val = val.replace(/"/g, "").replace(/^\s{1,}/g, "").replace(/\s{1,}$/g, "");
+            // if(i>=59) debugger; // Tester for a date
+            key = elh.sanitizeCsv(key);
+            val = elh.sanitizeCsv(val);
             newLine[key] = val;
         });
 
-        // Title key concatenates named location and geographic coordinates and is first key value pair
-        titleVal = createTitle(newLine["Province/State"], newLine["Country/Region"], newLine['Lat'], newLine['Long'], newLine);
-        // debugger;
-        var newerLine = {title: titleVal ,... newLine};
+        titleVal = elh.createTitle(newLine["Province/State"], newLine["Country/Region"], newLine['Lat'], newLine['Long'], newLine);
+        var newerLine = {title: titleVal ,... newLine}; // Contains relevant data: title and dates. We will soon render the tables. 
 
+        // We will soon query the override containers for an area name
         var query =  newLine["Province/State"] + newLine["Country/Region"];
         query = query.split(",")[0];
         query = query.substr(0, 10);
-        // debugger;
         query = query.replace(new RegExp("[^a-zA-Z0-9 ,]", "g"), "");
         
         // Reset
         window.activeOverride = {};
-
         Object.keys(window.overrides).forEach(function(keyArea, i) { // {area: {...}}
             // console.log("keyArea Los Angeles: ", keyArea);
             // console.log("query usually not los Angeles: ", query);
             if((new RegExp(query, "i")).test(keyArea)) {
-                activeOverride = jQuery.extend(true, {}, window.overrides[keyArea]);
+                activeOverride = jQuery.extend(true, {}, window.overrides[keyArea]); // Deep clone
             }
         });
 
@@ -95,7 +108,6 @@ function makeArrayObjects(thead, tbody) {
             });
         }
 
-        // debugger;
         return newerLine;
     });
 
@@ -106,47 +118,50 @@ $.ajaxSetup({
     cache: false
 });
 
-// Order: Get overrides, then get live datapoints
-$.get("overrides-logic/endpoint.php", (data)=>{
-    if(data.length) {
-        window.overrides = JSON.parse(data, true);
-        // window.overrides.forEach(override => {  
-        //     Object.keys(override).forEach(function(key,i) {
-        //         return false;
-        //     });
-        // });
-        // debugger;
+/**
+ * Get date-case overrides, then get live datapoints, so you can override those live datapoints before rendering
+ * 
+ */
+(async function overrideContextsForLiveDataPoints() {
+
+    let overrideContexts = await fetch("overrides-logic/endpoint.php").then(dat=>dat.text()); // don't use .json() because can't assure it won't be empty
+    if(overrideContexts.length) {
+        window.overrides = JSON.parse(overrideContexts, true);
     }
 
-    $.get(url).done((textData, status, xhr)=>{ // xml header response, nope does not have Last-Modified
-        // Prepare lines
-        pipe = extractLines(textData);
-        var thead = getHeaders(pipe);
-        var tbody = getBodyCells(pipe);
-        var arrObjs = makeArrayObjects(thead, tbody);
-        // debugger;
-        
-        createSoi("Los Angeles", arrObjs);
-        createSoi("California", arrObjs);
-        createSoi("Washington", arrObjs);
-        createSoi("New York", arrObjs);
-        createSoi("Italy", arrObjs);
-        createSoi("United Kingdom, United Kingdom", arrObjs);
-        createSoi("Orange County", arrObjs);
+    let liveCsv = await fetch(window.url).then(dat=>dat.text());
 
-        // Add URLs if overrides-data provides
-        Object.keys(window.urls).forEach(function(keyArea, i) {
-            var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
-            if($matchedTitle.length) {
-                var $links = $matchedTitle.closest(".area").find(".links");
-                window.urls[keyArea].forEach(url => {
-                    $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
-                });
-            }
-        });
+    // Prepare lines
+    let lh = new LineHelpers();
+    let lines = lh.extractLines(liveCsv);
+    let thead = lh.getHeaders( lines );
+    var tbody = lh.getBodyCells( lines );
 
-    }); // get
-});
+    // Prepare Context
+    var arrObjs = makeArrayObjects(thead, tbody);
+    
+    // Render table and graphs
+    createSoi("Los Angeles", arrObjs);
+    createSoi("California", arrObjs);
+    createSoi("Washington", arrObjs);
+    createSoi("New York", arrObjs);
+    createSoi("Hubei", arrObjs);
+    createSoi("Italy", arrObjs);
+    createSoi("United Kingdom, United Kingdom", arrObjs);
+    createSoi("Orange County", arrObjs);
+
+    // Add URLs to tables if applicable (if there is an overrides-data/ file for that area)
+    Object.keys(window.urls).forEach(function(keyArea, i) {
+        var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
+        if($matchedTitle.length) {
+            var $links = $matchedTitle.closest(".area").find(".links");
+            window.urls[keyArea].forEach(url => {
+                $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
+            });
+        }
+    });
+
+})(); // Chained fetches
 
 
 // Subject of interest
