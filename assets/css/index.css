@@ -1,0 +1,66 @@
+.container-alt {
+    padding: 10px;
+}
+#title {
+    font-size: 3rem;
+}
+#desc {
+    margin-top: 5px;
+}
+#credits {
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+/* Mobile responsive: Credit and source inline vs different lines */
+#credits .source {
+    display: block;
+}
+@media (min-width: 768px) {
+    #credits span:not(:first-child) {
+        margin-left: 20px;
+        display: inline;
+    }
+}
+#credits .authored {
+    font-weight: bold;
+}
+#credits .source {
+    font-style: italic;
+}
+.area {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 5px;
+}
+.area .title {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.area th, .area td {
+    padding-left:10px;
+    padding-right:10px;
+}
+.area .js-table {
+    margin: 0 auto;
+}
+.fa-link {
+    margin-left: .5ch;
+    font-size: 1rem;
+}
+.clickable {
+    cursor: pointer;
+}
+.clickable:hover {
+    color: green;
+}
+.links {
+    position: absolute;
+    right: 0;
+    top: -22.5px;
+    margin-top: .25ch;
+}
