@@ -145,12 +145,11 @@ $.ajaxSetup({
     createSoi("California", arrObjs);
     createSoi("Washington", arrObjs);
     createSoi("New York", arrObjs);
-    createSoi("Hubei", arrObjs);
-    createSoi("Italy", arrObjs);
     createSoi("United Kingdom, United Kingdom", arrObjs);
-    createSoi("Orange County", arrObjs);
+    createSoi("Italy", arrObjs);
+    createSoi("Japan", arrObjs);
 
-    // Add URLs to tables if applicable (if there is an overrides-data/ file for that area)
+    // Finishing touch: Add URLs to tables (if in overrides-data/_AREA_.json)
     Object.keys(window.urls).forEach(function(keyArea, i) {
         var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
         if($matchedTitle.length) {
@@ -178,14 +177,14 @@ function createSoi(place, arrObjs) {
             return entry.title.indexOf(place)!==-1;
     });
 
-    let templateHtml = $("#template-table").html();
-    let $template = $(templateHtml);
-    let $title = $template.find(".title");
-
     // Do not assume you hardcode the place's name without typos
     if(typeof queryFirstEntry==="undefined") {
         return;
     }
+
+    let templateHtml = $("#template-table").html();
+    let $template = $(templateHtml);
+    let $title = $template.find(".title");
     $title.html(queryFirstEntry.title);
 
     let $table = $template.find(".js-table");
@@ -221,6 +220,15 @@ function createSoi(place, arrObjs) {
         `);
         window.graphData.push({x:unix, y:cumulativeCases});
     });
+
+
+    let $formula = $template.find(".formula");
+    let y_cumulativeCases = graphData.map(xy=>xy.y);
+    $.get("reg.php?y_points=" + y_cumulativeCases.join(","))
+    .done(res=>{ 
+        $formula.html(res);
+        // debugger;
+     });
 
     let $graph = $template.find(".js-graph");
     var ctx = $graph[0].getContext("2d");
@@ -258,5 +266,5 @@ function createSoi(place, arrObjs) {
         }
     });
 
-    $("body").append($template);
-}
+    $("#areas").append($template);
+} // soi
