@@ -1,6 +1,6 @@
 <?php
 $ls_filenames = [];
-$prefix_path = "../overrides-data/";
+$prefix_path = "../override-dates-data/";
 $overrides = []; // keyValue pairs: json filename and json content
 
 $cmd = sprintf("cd $prefix_path; ls *.json");

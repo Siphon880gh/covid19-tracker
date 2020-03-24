@@ -25,7 +25,7 @@ window.johnHopkins = [];
 window.overrides = [];
 window.urlLists = [];
 window.sourcesRetrieved = 0;
-window.sourcesAllRetrieved = 3; // John Hopkins + LA County + overrides + urlLists
+window.sourcesAllRetrieved = 4; // John Hopkins + LA County + overrides + urlLists
 
 // Csv text where first line are headers
 const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
@@ -51,12 +51,12 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 } // csvToJson
 
 (async function setOverrides() {
-    var response = await fetch("overrides-logic/endpoint.php", dat=>dat.txt());
+    var response = await fetch("override-dates-logic/endpoint.php", dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
 
-    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, title, dates {} }
+    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
         var area = "";
         area = filename.replace(".json", "");
         arr2.push({area:area, dates:arr[filename]});
@@ -73,7 +73,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
 
-    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, title, dates {} }
+    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
         var area = "";
         area = filename.replace(".json", "");
         arr2.push({area:area, urls:arr[filename]});
@@ -85,8 +85,24 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaCounty() {
-    // window.laCounty = await fetch("overrides-logic/endpoint.php").then(dat=>dat.text()); // don't use .json() because can't assure it won't be empty
-    // if(laCounty.length) laCounty = JSON.parse(laCounty, true);
+    var response = await fetch("cronjobs/la-county/data/daily-cases.json", dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [];
+    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    arr = reverseObject(arr);
+     
+    // {dates...} => conformedObject { area, title, dates {} }
+    window.laCounty = [
+        {
+            area: "Los Angeles",
+            title: "Los Angeles",
+            dates: arr
+        }
+    ];
+    
+    console.log("area, title, dates []]", window.laCounty);
+    debugger;
+    window.sourcesRetrieved++;
 })(); // setLaCounty
 
 (async function setjohnHopkins() {
@@ -155,7 +171,7 @@ function reverseObject(object) {
     }       
 
     return newObject;
-  }
+} // reverseObject
 
 function renderTable(query, dataSource) {
     let queryFirstEntry = dataSource.find((areaObject, i)=>{
@@ -290,7 +306,7 @@ function renderLinksLater() {
 var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
-        renderTable("Los Angeles", window.johnHopkins);
+        renderTable("Los Angeles", window.laCounty);
         renderTable("California", window.johnHopkins);
         renderTable("Washington", window.johnHopkins);
         renderTable("New York", window.johnHopkins);

@@ -1,0 +1,4 @@
+Notes on Los Angeles:
+
+- John Hopkins University stopped reporting numbers at a county level on 3/10/20. So we replaced the data source form John Hopkins to LA County Public Health which does not have  an API so we are using a cron job. 
+- The county number on their website is lower than when you add up all their press release new case numbers. To resolve this, I override a lower number of cases at a beginning date "3/4/20": 6 => "3/4/20": 1, which will have little effect on the graph and cumulative cases

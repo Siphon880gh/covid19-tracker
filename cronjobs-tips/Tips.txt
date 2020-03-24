@@ -1,0 +1,11 @@
+Schedule a Cronjob at your cPanel to pull information from a website that does not have a public API. The scrapping logic would be in that cronjob's county code.
+
+1. Add New Cron Job
+2. Once  Per Day
+3. For hour, set to a specific hour at the server's local time (You can find the time: ssh -> date command)
+4. For command, use the appropriate path to get to endpoint:
+cd /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county; php -f endpoint.php;
+
+
+
+
