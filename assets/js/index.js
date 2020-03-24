@@ -1,185 +1,186 @@
-window.url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv";
-window.overrides = [];
-window.activeOverride = {};
-window.urls = {}; // urls in overrides-data
+// TODO:
+// class DataSourcePicker{ 
+//     constructor {
+//         this.constants = ["NONE", "DEFAULT", "JOHN_HOPKINS", "LA_COUNTY_DEPT_PUBLIC_HEALTH"];
+//         this.interface = {
+//             "Los Angeles": this.constants["LA_COUNTY_DEPT_PUBLIC_HEALTH"]
+//         }
+//         default
+//         url
+//     }
+// }
 
-class LineHelpers {
-    constructor() {
-        this.extractLines = (text) => {
-            return text.split("\n");
-        }
-        this.getHeaders = (lines) => {
-            var headers = lines[0]; // first line text
-            headers = headers.split(","); // array
-            return headers;
-        }
-        this.getBodyCells = (lines) => {
-            lines.shift(1); // remove first line;
-            lines = lines.map(line=>{
-                return line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/); // array and ignore commas within double-quotes 
-            })
-            return lines;
-        };
-    } // constructor
-}
-
-class ElementHelpers {
-    constructor() {
-        /**
-         * Create the Title format seen above graphs
-         * @param {string} sp State/Province
-         * @param {string} cr Country/Region
-         * @param {string} lat Coordinate
-         * @param {string} long Coordinate
-         */
-        this.createTitle = (sp, cr, lat, long, newLine) => {
-            // Don't assume the csv is not messed up on some lines
-            if(typeof sp==="undefined" || typeof lat==="undefined" || typeof long==="undefined") return;
-    
-            // Some long/lats are just too long
-            if(lat.toString().length>8) lat = lat.toString().substr(0,8);
-            if(long.toString().length>8) long = long.toString().substr(0,8);
-    
-            var name = (sp.length?sp+", ":"") + cr;
-            var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
-    
-            // if(named.indexOf("Los Angeles")!==-1) { debugger; } // Tester
-            return name + coords;
-        } // createTile
-        /**
-         * This will eliminate CSV conventions so the text can make sense in a DOM.
-         *  - Some CSV entries have double quotation marks to have the comma as part of the value. Some have trailing spaces that may be API glitches on their side.
-         * @param {String} text the string that needs to be sanitized of CSV conventions 
-         */
-        this.sanitizeCsv = (text) => {
-            return text.replace(/"/g, "").replace(/^\s{1,}/g, "").replace(/\s{1,}$/g, "");
-        }
-    } // constructor
-}
-
-/**
- * Make an array of objects with the keys from the headers
- * @param {array String} thead Array of keys
- * @param {array String} tbody Array of values
- */
-function makeArrayObjects(thead, tbody) {
-    var elh = new ElementHelpers();
-
-    tbody = tbody.map(function(line) {
-        var newLine = {};
-        // if(named.indexOf("Los Angeles")!==-1) { debugger; } // Tester
-
-        line.forEach( function(val,i) {
-            var key = thead[i];
-            // if(i>=59) debugger; // Tester for a date
-            key = elh.sanitizeCsv(key);
-            val = elh.sanitizeCsv(val);
-            newLine[key] = val;
-        });
-
-        titleVal = elh.createTitle(newLine["Province/State"], newLine["Country/Region"], newLine['Lat'], newLine['Long'], newLine);
-        var newerLine = {title: titleVal ,... newLine}; // Contains relevant data: title and dates. We will soon render the tables. 
-
-        // We will soon query the override containers for an area name
-        var query =  newLine["Province/State"] + newLine["Country/Region"];
-        query = query.split(",")[0];
-        query = query.substr(0, 10);
-        query = query.replace(new RegExp("[^a-zA-Z0-9 ,]", "g"), "");
-        
-        // Reset
-        window.activeOverride = {};
-        Object.keys(window.overrides).forEach(function(keyArea, i) { // {area: {...}}
-            // console.log("keyArea Los Angeles: ", keyArea);
-            // console.log("query usually not los Angeles: ", query);
-            if((new RegExp(query, "i")).test(keyArea)) {
-                activeOverride = jQuery.extend(true, {}, window.overrides[keyArea]); // Deep clone
-            }
-        });
-
-        if(!jQuery.isEmptyObject(activeOverride)) { // {...} which is {date:cases, date:cases, (urls: [.., ..])}
-            Object.keys(activeOverride).forEach(function(keyDate, i) { 
-                // console.log("date format", keyDate);
-                if(typeof newerLine[keyDate]!=="undefined") {
-                    // console.log("keydate matches, 2 at end:")
-                    newerLine[keyDate] = activeOverride[keyDate]; // assign number cases
-                } else if(keyDate==="urls") {
-                    window.urls[query] = activeOverride["urls"];
-                }
-            });
-        }
-
-        return newerLine;
-    });
-
-    return tbody;
-} // makeArrayObjects
-
+/* Latest data, so turn off cache */
 $.ajaxSetup({
     cache: false
 });
 
-/**
- * Get date-case overrides, then get live datapoints, so you can override those live datapoints before rendering
+/** Overrides 
  * 
- */
-(async function overrideContextsForLiveDataPoints() {
+ * Expect window.overrides; {area, dates}
+*/
+window.laCounty = [];
+window.johnHopkins = [];
 
-    let overrideContexts = await fetch("overrides-logic/endpoint.php").then(dat=>dat.text()); // don't use .json() because can't assure it won't be empty
-    if(overrideContexts.length) {
-        window.overrides = JSON.parse(overrideContexts, true);
+window.overrides = [];
+window.urlLists = [];
+window.sourcesRetrieved = 0;
+window.sourcesAllRetrieved = 3; // John Hopkins + LA County + overrides + urlLists
+
+// Csv text where first line are headers
+const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
+    const cutlast = (_, i, a) => i < a.length - 1;
+    // const regex = /(?:[\t ]?)+("+)?(.*?)\1(?:[\t ]?)+(?:,|$)/gm; // no variable chars
+    const regex = new RegExp(`(?:[\\t ]?)+(${quotechar}+)?(.*?)\\1(?:[\\t ]?)+(?:${delimiter}|$)`, 'gm');
+    const lines = str.split('\n');
+    let headers = headerList || lines.splice(0, 1)[0].match(regex).filter(cutlast);
+    headers = headers.map(header=>(header.length && header[header.length-1]===',')?header.substr(0, header.length-1):header);
+  
+    const list = [];
+  
+    for (const line of lines) {
+      const val = {};
+      for (const [i, m] of [...line.matchAll(regex)].filter(cutlast).entries()) {
+        // Attempt to convert to Number if possible, also use null if blank
+        val[headers[i]] = (m[2].length > 0) ? Number(m[2]) || m[2] : null;
+      }
+      list.push(val);
+    }
+  
+    return list;
+} // csvToJson
+
+(async function setOverrides() {
+    var response = await fetch("overrides-logic/endpoint.php", dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [], arr2 = [];
+    if(dump.length) arr = JSON.parse(dump, true);
+
+    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, title, dates {} }
+        var area = "";
+        area = filename.replace(".json", "");
+        arr2.push({area:area, dates:arr[filename]});
+    });
+    window.overrides = arr2;
+    console.log("overrides [ { area, dates {} }, ... ]", window.overrides);
+    window.sourcesRetrieved++;
+})(); // setOverrides
+
+
+(async function setUrls() {
+    var response = await fetch("urls-logic/endpoint.php", dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [], arr2 = [];
+    if(dump.length) arr = JSON.parse(dump, true);
+
+    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, title, dates {} }
+        var area = "";
+        area = filename.replace(".json", "");
+        arr2.push({area:area, urls:arr[filename]});
+    });
+    window.urlLists = arr2;
+    console.log("urls [ { area, urls [] }, ... ]", window.urlLists);
+    window.sourcesRetrieved++;
+})(); // setOverrides
+
+
+(async function setLaCounty() {
+    // window.laCounty = await fetch("overrides-logic/endpoint.php").then(dat=>dat.text()); // don't use .json() because can't assure it won't be empty
+    // if(laCounty.length) laCounty = JSON.parse(laCounty, true);
+})(); // setLaCounty
+
+(async function setjohnHopkins() {
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [];
+    if(dump.length>0) arr = csvToJson(dump);
+
+    // Conform Object
+    arr.forEach((areaObject, i) => { // {province/state,country/region,lat,long,dates...} => conformedObject { area, title, dates {} }
+        var conformedObject = {
+                                area:"",
+                                title:"",
+                                dates: {}
+                              };
+
+        var sp = (typeof areaObject["Province/State"]!=="undefined" && areaObject["Province/State"]!==null)?areaObject["Province/State"]:"", 
+            cr = (typeof areaObject["Country/Region"]!=="undefined" && areaObject["Country/Region"]!==null)?areaObject["Country/Region"]:"", 
+            lat = (typeof areaObject["Lat"]!=="undefined" && areaObject["Lat"]!==null)?areaObject["Lat"]:"", 
+            long = (typeof areaObject["Long"]!=="undefined" && areaObject["Long"]!==null)?areaObject["Long"]:"";
+
+        // Coerce types
+        if(typeof sp==="undefined" || sp === null) sp = "";
+        if(typeof cr==="undefined" || cr === null) cr = "";
+        lat = lat + "";
+        long = long + "";
+
+        // Coerce max length for long/lat
+        if(lat.toString().length>8) lat = lat.toString().substr(0,8);
+        if(long.toString().length>8) long = long.toString().substr(0,8);
+
+        var name = (sp.length?sp+", ":"") + cr;
+        var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
+        conformedObject.area = name;
+        conformedObject.title = name + coords;
+        // console.log("Name + coords", conformedObject.title);
+
+        delete areaObject["title"];
+        delete areaObject["Province/State"];
+        delete areaObject["Country/Region"];
+        delete areaObject["Lat"];
+        delete areaObject["Long"];
+        conformedObject.dates = areaObject;
+        // console.log("dates", conformedObject.dates);
+        // console.log("obj { area, title, dates {} }", conformedObject);
+
+        arr[i] = conformedObject;
+
+    }); // map dumps
+    window.johnHopkins = arr;
+    // console.log("johnHopkins [ { area, title, dates {} }, ... ]", window.johnHopkins);
+    window.sourcesRetrieved++;
+})(); // setjohnHopkins
+
+function reverseObject(object) {
+    var newObject = {};
+    var keys = [];
+
+    for (var key in object) {
+        keys.push(key);
     }
 
-    let liveCsv = await fetch(window.url).then(dat=>dat.text());
+    for (var i = keys.length - 1; i >= 0; i--) {
+      var value = object[keys[i]];
+      newObject[keys[i]]= value;
+    }       
 
-    // Prepare lines
-    let lh = new LineHelpers();
-    let lines = lh.extractLines(liveCsv);
-    let thead = lh.getHeaders( lines );
-    var tbody = lh.getBodyCells( lines );
+    return newObject;
+  }
 
-    // Prepare Context
-    var arrObjs = makeArrayObjects(thead, tbody);
-    
-    // Render table and graphs
-    createSoi("Los Angeles", arrObjs);
-    createSoi("California", arrObjs);
-    createSoi("Washington", arrObjs);
-    createSoi("New York", arrObjs);
-    createSoi("United Kingdom, United Kingdom", arrObjs);
-    createSoi("Italy", arrObjs);
-    createSoi("Japan", arrObjs);
-
-    // Finishing touch: Add URLs to tables (if in overrides-data/_AREA_.json)
-    Object.keys(window.urls).forEach(function(keyArea, i) {
-        var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
-        if($matchedTitle.length) {
-            var $links = $matchedTitle.closest(".area").find(".links");
-            window.urls[keyArea].forEach(url => {
-                $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
-            });
-        }
+function renderTable(query, dataSource) {
+    let queryFirstEntry = dataSource.find((areaObject, i)=>{
+        return areaObject.area.indexOf(query)!==-1;
     });
 
-})(); // Chained fetches
-
-
-// Subject of interest
-function createSoi(place, arrObjs) {
-    let queryFirstEntry = arrObjs.find((entry)=>{
-        // if(entry.title.indexOf("Los Angeles")!==-1) {
-        //     debugger;
-        // }
-
-        // Do not assume the live CSV will not glitch on some lines
-        if(typeof entry.title==="undefined")
-            return false;
-        else
-            return entry.title.indexOf(place)!==-1;
-    });
-
-    // Do not assume you hardcode the place's name without typos
+    // If the area is not found in the data source
     if(typeof queryFirstEntry==="undefined") {
         return;
+    }
+
+    let queryFirstOverride = window.overrides.find((anOveride, i)=>{
+        return anOveride.area.indexOf(query)!==-1;
+    });
+    // If need to override
+    if(typeof queryFirstOverride!=="undefined") {
+        var originalDateCases =  queryFirstEntry.dates;
+        var overridingDateCases = reverseObject(queryFirstOverride.dates);
+
+        for (var date in overridingDateCases) { // prop in obj
+            originalDateCases[date] = overridingDateCases[date];
+            console.log(date);
+        }
+        queryFirstEntry.dates = originalDateCases;
+        console.log("dates recent=>oldest", queryFirstEntry.dates);
     }
 
     let templateHtml = $("#template-table").html();
@@ -195,20 +196,13 @@ function createSoi(place, arrObjs) {
                     </tr></thead>`);
     $table.append("<tbody/>");
 
-    let $tbody = $template.find("tbody");
-
-    delete queryFirstEntry["title"];
-    delete queryFirstEntry["Province/State"];
-    delete queryFirstEntry["Country/Region"];
-    delete queryFirstEntry["Lat"];
-    delete queryFirstEntry["Long"];
-
     window.cumulativeCases = 0;
     window.graphData  = []; // of {x:int, y:int}
+    let dateCasesKvp = queryFirstEntry.dates; // date-cases key-value pairs {m/d/yy: number cases]}
+    let $tbody = $template.find("tbody");
 
-    
-    Object.keys(queryFirstEntry).forEach(function(date, i) {
-        let cases = parseInt( queryFirstEntry[date].length?queryFirstEntry[date]:0 );
+    Object.keys(dateCasesKvp).forEach(function(date, i) {
+        let cases = parseInt(dateCasesKvp[date]);
         let unix = moment(date, "MM/DD/YYYY").valueOf()/1000;
         window.cumulativeCases += cases;
         $tbody.prepend(`
@@ -221,10 +215,9 @@ function createSoi(place, arrObjs) {
         window.graphData.push({x:unix, y:cumulativeCases});
     });
 
-
     let $formula = $template.find(".formula");
     let y_cumulativeCases = graphData.map(xy=>xy.y);
-    $.get("reg.php?y_points=" + y_cumulativeCases.join(","))
+    $.get("best-fit.php?y_points=" + y_cumulativeCases.join(","))
     .done(res=>{ 
         $formula.html(res);
         // debugger;
@@ -266,5 +259,42 @@ function createSoi(place, arrObjs) {
         }
     });
 
+
+    let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
+        return anUrlList.area.indexOf(query)!==-1;
+    });
+    // If need render urls
+    if(typeof queryFirstUrls!=="undefined") {
+        var $links = $template.find(".links");
+
+        queryFirstUrls.urls.forEach(url=>{
+            $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
+        });
+    } // queryFirstUrls
+
     $("#areas").append($template);
-} // soi
+} // renderTable
+
+function renderLinksLater() {
+    Object.keys(window.urls).forEach(function(keyArea, i) {
+        var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
+        if($matchedTitle.length) {
+            var $links = $matchedTitle.closest(".area").find(".links");
+            window.urls[keyArea].forEach(url => {
+                $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
+            });
+        }
+    });
+}
+
+var sourcesRetrieving = setInterval(()=> {
+    if(sourcesRetrieved===sourcesAllRetrieved) {
+        clearInterval(sourcesRetrieving);
+        renderTable("Los Angeles", window.johnHopkins);
+        renderTable("California", window.johnHopkins);
+        renderTable("Washington", window.johnHopkins);
+        renderTable("New York", window.johnHopkins);
+        renderTable("United Kingdom, United Kingdom", window.johnHopkins);
+        renderTable("Italy", window.johnHopkins);
+    }
+}, 100);

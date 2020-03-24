@@ -10,8 +10,8 @@ In overrides-data/, you want .json files named after the titles, for example: Lo
 # Json content
 
 {
-    "3/18/20": "46",
-    "3/17/20": "33",
+    "3/18/20": 46,
+    "3/17/20": 33,
     "urls": [
         "http://publichealth.lacounty.gov/media/Coronavirus/",
         "https://twitter.com/lapublichealth"
@@ -21,3 +21,7 @@ In overrides-data/, you want .json files named after the titles, for example: Lo
 Those dates are overridden by your inputted correct case numbers. The dates must be spelled exactly like they appear on the date columns.
 
 The urls key is optional. This is an array of links that may interest the user. Some good links will include statistics for the day, so you can know if the most recent live data point is correct.
+
+# Adding further notes
+
+At overrides-data/, only all .json files named after an area's name (which is a key in the data sources) are looked into. So you can add text files of same names if you want to write down notes for that area.

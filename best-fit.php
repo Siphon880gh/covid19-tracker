@@ -8,7 +8,7 @@
         $y_points = preg_replace("/[^0-9,]/", "", $y_points);
 
         $output = "";
-        exec('node reg.js "' . $y_points . '"', $output);
+        exec('node best-fit.js "' . $y_points . '"', $output);
         $formulas = $output[0]; // exec keeps the results in an array at 0th index
         echo $formulas;
     }
