@@ -86,11 +86,12 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaCounty() {
-    var response = await fetch("cronjobs/la-county/data/daily-cases.json", dat=>dat.txt());
+    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length) arr = JSON.parse(dump, true); // {dates...}
     arr = reverseObject(arr);
+    arr = convertCumulativeCasesToBreakdownCases(arr);
      
     // {dates...} => conformedObject { area, title, dates {} }
     window.laCounty = [
@@ -106,7 +107,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     window.sourcesRetrieved++;
 })(); // setLaCounty
 
-(async function setjohnHopkinsStates() {
+(async function setjohnHopkinsStates() { // reports daily breakdown cases
     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
@@ -146,6 +147,8 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
         delete areaObject["Country/Region"];
         delete areaObject["Lat"];
         delete areaObject["Long"];
+        if(typeof areaObject[""]!=="undefined") delete areaObject[""]; // glitchy csv
+        if(typeof areaObject[","]!=="undefined") delete areaObject[","]; // glitchy csv
         conformedObject.dates = areaObject;
         // console.log("dates", conformedObject.dates);
         // console.log("obj { area, title, dates {} }", conformedObject);
@@ -159,7 +162,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 })(); // setjohnHopkinsStates
 
 
-(async function setjohnHopkinsCountries() {
+(async function setjohnHopkinsCountries() { // // reports daily cumulative cases
     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
@@ -199,6 +202,9 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
         delete areaObject["Country/Region"];
         delete areaObject["Lat"];
         delete areaObject["Long"];
+        if(typeof areaObject[""]!=="undefined") delete areaObject[""]; // glitchy csv
+        if(typeof areaObject[","]!=="undefined") delete areaObject[","]; // glitchy csv
+        areaObject = convertCumulativeCasesToBreakdownCases(areaObject);
         conformedObject.dates = areaObject;
         // console.log("dates", conformedObject.dates);
         // console.log("obj { area, title, dates {} }", conformedObject);
@@ -210,6 +216,18 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     // console.log("johnHopkins [ { area, title, dates {} }, ... ]", window.johnHopkins);
     window.sourcesRetrieved++;
 })(); // setjohnHopkinsCountries
+
+// Convert cumulative cases to breakdown cases
+function convertCumulativeCasesToBreakdownCases(areaObject) { // areaObject without the city/state/lat/long fields, so only the date fields
+    var prevCumulativeCases = 0;
+    Object.keys(areaObject).forEach(function(date, index) {
+        let cumulativeCases = parseInt(areaObject[date]);
+        areaObject[date] = cumulativeCases - prevCumulativeCases;
+        prevCumulativeCases = cumulativeCases;
+    });
+    return areaObject;
+} // convertCumulativeCasesToBreakdownCases
+
 
 function reverseObject(object) {
     var newObject = {};
@@ -226,11 +244,18 @@ function reverseObject(object) {
 
     return newObject;
 } // reverseObject
+// window.queryByCoords = [];
 
 function renderTable(query, dataSource) {
+    // query can search area name or coordinates (coordinates have to be exact)
     let queryFirstEntry = dataSource.find((areaObject, i)=>{
-        return areaObject.area.indexOf(query)!==-1;
+        return areaObject.title.indexOf(query)!==-1;
     });
+
+    // dataSource.forEach((areaObject, i)=>{
+    //     if(areaObject.title.indexOf(query)!==-1);
+    //         window.queryByCoords.push(areaObject.title);
+    // });
 
     // If the area is not found in the data source
     if(typeof queryFirstEntry==="undefined") {
@@ -373,14 +398,13 @@ function getRandomRgb() {
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
-function combineGraphs() {
-    let $combinedGraph = $("#wrapper-combined-graphs");
+function combineGraphs($canva, arr$areas) {
     let graphs = [];
 
-    $(".area").each((i, area) => { 
-        let $cumulativeCases = $(area).find("td:nth-child(3)"); // [$td,...]
+    arr$areas.forEach(($area, i) => { 
+        let $cumulativeCases = $area.find("td:nth-child(3)"); // [$td,...]
         let cumulativeCases = $cumulativeCases.toArray().map((td)=>parseInt($(td).text())); // [int,...]
-        let $unixs = $(area).find("td:nth-child(1)"); // [$td,...]
+        let $unixs = $area.find("td:nth-child(1)"); // [$td,...]
         let unixs = $unixs.toArray().map((td)=>parseInt($(td).attr("data-unix"))); // [int,...]
 
         window.graphData = [];
@@ -391,32 +415,45 @@ function combineGraphs() {
             window.graphData.push(graphCoordinate);
         });
 
-        let areaName = $(area).find(".title").attr("data-area"); 
+        let areaName = $area.find(".title").attr("data-area"); 
+        let randomColor = getRandomRgb();
         
         let graph = {
             label: areaName,
             data: window.graphData,
-            pointBorderColor: getRandomRgb(),
-            borderColor: getRandomRgb()
+            pointBorderColor: randomColor,
+            borderColor: randomColor
          }
          graphs.push(graph);
      });
 
      let selfData = [];
 
-    insertGraph($combinedGraph, graphs);
+    insertGraph($canva, graphs);
 }
 
 var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
-        // renderTable("US", window.johnHopkinsCountries);
         renderTable("Los Angeles", window.laCounty);
-        renderTable("California", window.johnHopkinsStates);
-        renderTable("Washington", window.johnHopkinsStates);
-        renderTable("New York", window.johnHopkinsStates);
-        renderTable("United Kingdom, United Kingdom", window.johnHopkinsStates);
-        // renderTable("Italy", window.johnHopkins);
-        combineGraphs();
+        renderTable("Japan", window.johnHopkinsCountries);
+        renderTable("US", window.johnHopkinsCountries);
+        renderTable("Italy", window.johnHopkinsCountries);
+        renderTable("55.3781, -3.436", window.johnHopkinsCountries); // United Kingdom
+
+        const arr$areas1 = [
+                            $(".area:has(.title[data-area='US'])"), 
+                            $(".area:has(.title[data-area='Los Angeles'])"),
+                            $(".area:has(.title[data-area='Japan'])"),
+                            $(".area:has(.title[data-area='Italy'])"),
+                        ]
+        combineGraphs($("#modal-combined-graphs-1 canvas"), arr$areas1);
+
+
+        const arr$areas2 = [
+            $(".area:has(.title[data-area='Los Angeles'])"),
+            $(".area:has(.title[data-area='Japan'])")
+        ]
+        combineGraphs($("#modal-combined-graphs-2 canvas"), arr$areas2);
     }
 }, 100);

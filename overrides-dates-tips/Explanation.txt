@@ -18,9 +18,8 @@ In overrides-data/, you want .json files named after the titles, for example: Lo
     ]
 }
 
-Those dates are overridden by your inputted correct case numbers. The dates must be spelled exactly like they appear on the date columns.
+Those dates are overridden by your inputted correct case numbers. The dates must be spelled exactly like they appear on the date column in the table. The number is the number of cases broken down, not the cumulative cases, even if the online data source we are pulling from reports daily cumulative cases. Just think of this number as replacing the breakdown cases column on the table.
 
-The urls key is optional. This is an array of links that may interest the user. Some good links will include statistics for the day, so you can know if the most recent live data point is correct.
 
 # Adding further notes
 

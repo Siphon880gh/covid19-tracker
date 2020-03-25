@@ -5,12 +5,22 @@
 // https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
 // https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv
 
+// Other possible sources:
+// https://covidtracking.com/data/
+// https://covidtracking.com/api/states/info
+// https://www.worldometers.info/coronavirus/country/us/
+
 // If tweaking Google Map:
 // https://developers.google.com/maps/documentation/maps-static/intro#Zoomlevels
 
 // "Los Angeles inaccurate" ticket:
 // https://github.com/CSSEGISandData/COVID-19/issues/495
 // Yeah, starting 3/10/20, they're only doing the US by states. Province/State is smallest subcategory they go, and only for some countries (dependencies of some nations and provinces/states of US, China, Canada, Australia, I believe).
+//
+// "California inaccurate" ticket
+// https://github.com/CSSEGISandData/COVID-19/issues/1505
+// Staring 3/24, they're only doing by country
+
 ?>
 <html lang="en">
   <head>
@@ -31,7 +41,7 @@
             <div id="desc">Find out how fast the virus is growing in your area. <a href="mailto:weffung@ucdavis.edu">Contact me</a> to request other areas.</div>
             <div id="credits">
                 <span class="authored">Weng Fei Fung</span>
-                <span class="source">Data pulled on a daily basis from John Hopkins University and Los Angeles County Public Health. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. If you are aware of any website or API that updates the number of cases for their county / state / province / country / region, you can contact me to have my app pull from their info daily as well, but keep in mind that it costs bandwidth on my server. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so have to refer to US table.</span>
+                <span class="source">Data pulled on a daily basis from John Hopkins University and Los Angeles County Public Health. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. If you are aware of any website or API that updates the number of cases for their county / state / province / country / region, you can contact me to have my app pull from their info daily as well, but keep in mind that it costs bandwidth on my server. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so have to refer to US table. Data is updated everyday at 5pm PST and once again at 8pm PST.</span>
             </div>
             
             <p></p>
@@ -53,7 +63,7 @@
             </template>
 
             <!-- Modal -->
-            <div id="modal-combined-graphs" class="modal fade" role="dialog">
+            <div id="modal-combined-graphs-1" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
                     <!-- Modal content-->
@@ -63,12 +73,39 @@
                             <h4 class="modal-title">Compare Growth Curves</h4>
                             <small>
                             </p>
-                            <p>Compare growth curves of all the shown areas</p>
+                            <p>Compare growth curves of interested areas</p>
                             </small>
                         </div>
                         <div class="modal-body">
                             <!-- Insert here -->
-                            <canvas id='wrapper-combined-graphs'> </canvas>
+                            <canvas></canvas>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> <!--/ footer -->
+                    </div> <!--/ modal-content -->
+
+                </div> <!--/ dialog -->
+            </div> <!--/ modal -->
+
+
+            <!-- Modal -->
+            <div id="modal-combined-graphs-2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Compare Growth Curves</h4>
+                            <small>
+                            </p>
+                            <p>Compare growth curves of interested areas</p>
+                            </small>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Insert here -->
+                            <canvas></canvas>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -79,7 +116,8 @@
             </div> <!--/ modal -->
 
             <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <a data-toggle="modal" href="#modal-combined-graphs"><i class="fa fa-chart-line"></i> See combined</a>
+                <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i> View 1</a><br/>
+                <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i> View 2</a>
             </div>
 
     <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
