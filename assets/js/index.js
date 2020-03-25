@@ -20,12 +20,13 @@ $.ajaxSetup({
  * Expect window.overrides; {area, dates}
 */
 window.laCounty = [];
-window.johnHopkins = [];
+window.johnHopkinsStates = []; // John Hopkins University stopped reporting county levels on 3/10/20 however state levels still available.
+window.johnHopkinsCountries= []; // John Hopkins University stopped reporting state levels on 3/24/20 onwards. So we can only refer to US
 
 window.overrides = [];
 window.urlLists = [];
 window.sourcesRetrieved = 0;
-window.sourcesAllRetrieved = 4; // John Hopkins + LA County + overrides + urlLists
+window.sourcesAllRetrieved = 5; // John Hopkins + LA County + overrides + urlLists
 
 // Csv text where first line are headers
 const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
@@ -105,7 +106,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     window.sourcesRetrieved++;
 })(); // setLaCounty
 
-(async function setjohnHopkins() {
+(async function setjohnHopkinsStates() {
     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
@@ -152,10 +153,63 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
         arr[i] = conformedObject;
 
     }); // map dumps
-    window.johnHopkins = arr;
+    window.johnHopkinsStates = arr;
     // console.log("johnHopkins [ { area, title, dates {} }, ... ]", window.johnHopkins);
     window.sourcesRetrieved++;
-})(); // setjohnHopkins
+})(); // setjohnHopkinsStates
+
+
+(async function setjohnHopkinsCountries() {
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [];
+    if(dump.length>0) arr = csvToJson(dump);
+
+    // Conform Object
+    arr.forEach((areaObject, i) => { // {province/state,country/region,lat,long,dates...} => conformedObject { area, title, dates {} }
+        var conformedObject = {
+                                area:"",
+                                title:"",
+                                dates: {}
+                              };
+
+        var sp = (typeof areaObject["Province/State"]!=="undefined" && areaObject["Province/State"]!==null)?areaObject["Province/State"]:"", 
+            cr = (typeof areaObject["Country/Region"]!=="undefined" && areaObject["Country/Region"]!==null)?areaObject["Country/Region"]:"", 
+            lat = (typeof areaObject["Lat"]!=="undefined" && areaObject["Lat"]!==null)?areaObject["Lat"]:"", 
+            long = (typeof areaObject["Long"]!=="undefined" && areaObject["Long"]!==null)?areaObject["Long"]:"";
+
+        // Coerce types
+        if(typeof sp==="undefined" || sp === null) sp = "";
+        if(typeof cr==="undefined" || cr === null) cr = "";
+        lat = lat + "";
+        long = long + "";
+
+        // Coerce max length for long/lat
+        if(lat.toString().length>8) lat = lat.toString().substr(0,8);
+        if(long.toString().length>8) long = long.toString().substr(0,8);
+
+        var name = (sp.length?sp+", ":"") + cr;
+        var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
+        conformedObject.area = name;
+        conformedObject.title = name + coords;
+        // console.log("Name + coords", conformedObject.title);
+
+        delete areaObject["title"];
+        delete areaObject["Province/State"];
+        delete areaObject["Country/Region"];
+        delete areaObject["Lat"];
+        delete areaObject["Long"];
+        conformedObject.dates = areaObject;
+        // console.log("dates", conformedObject.dates);
+        // console.log("obj { area, title, dates {} }", conformedObject);
+
+        arr[i] = conformedObject;
+
+    }); // map dumps
+    window.johnHopkinsCountries = arr;
+    // console.log("johnHopkins [ { area, title, dates {} }, ... ]", window.johnHopkins);
+    window.sourcesRetrieved++;
+})(); // setjohnHopkinsCountries
 
 function reverseObject(object) {
     var newObject = {};
@@ -356,11 +410,12 @@ function combineGraphs() {
 var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
+        // renderTable("US", window.johnHopkinsCountries);
         renderTable("Los Angeles", window.laCounty);
-        renderTable("California", window.johnHopkins);
-        renderTable("Washington", window.johnHopkins);
-        renderTable("New York", window.johnHopkins);
-        renderTable("United Kingdom, United Kingdom", window.johnHopkins);
+        renderTable("California", window.johnHopkinsStates);
+        renderTable("Washington", window.johnHopkinsStates);
+        renderTable("New York", window.johnHopkinsStates);
+        renderTable("United Kingdom, United Kingdom", window.johnHopkinsStates);
         // renderTable("Italy", window.johnHopkins);
         combineGraphs();
     }
