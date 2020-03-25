@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Bootstrap, Font-Awesome  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
     <style><?php include("assets/css/index.css"); ?></style>
@@ -42,7 +42,7 @@
             <template id="template-table">
                 <div class="area">
                     <div class="links"></div>
-                    <div class="title"></div>
+                    <div class="title" data-area=""></div>
                     <div style="width: 100%; height: 100%">
                         <canvas class="js-graph"></canvas>
                         <div class="formula"></div>
@@ -52,11 +52,42 @@
                 </div>
             </template>
 
-    <!-- jQuery, Moment JS, Chart JS, Regression, index.js -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <!-- Modal -->
+            <div id="modal-combined-graphs" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Compare Growth Curves</h4>
+                            <small>
+                            </p>
+                            <p>Compare growth curves of all the shown areas</p>
+                            </small>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Insert here -->
+                            <canvas id='wrapper-combined-graphs'> </canvas>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> <!--/ footer -->
+                    </div> <!--/ modal-content -->
+
+                </div> <!--/ dialog -->
+            </div> <!--/ modal -->
+
+            <div id="nav-global" style="position:absolute; top:10px; right:10px;">
+                <a data-toggle="modal" href="#modal-combined-graphs"><i class="fa fa-chart-line"></i> See combined</a>
+            </div>
+
+    <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
     
     <script><?php include("assets/js/index.js"); ?></script>
 

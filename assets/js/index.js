@@ -101,7 +101,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     ];
     
     console.log("area, title, dates []]", window.laCounty);
-    debugger;
+    // debugger;
     window.sourcesRetrieved++;
 })(); // setLaCounty
 
@@ -203,16 +203,19 @@ function renderTable(query, dataSource) {
     let $template = $(templateHtml);
     let $title = $template.find(".title");
     $title.html(queryFirstEntry.title);
+    $title.attr("data-area", queryFirstEntry.area); // You'll need the title without coords for combined graphs' area labels
 
     let $table = $template.find(".js-table");
     $table.append(`<thead><tr>
                         <th>Date</th>
                         <th>Cases</th>
                         <th>Cumulative</th>
+                        <th>Change</th>
                     </tr></thead>`);
     $table.append("<tbody/>");
 
     window.cumulativeCases = 0;
+    window.prevCumulativeCases = 0;
     window.graphData  = []; // of {x:int, y:int}
     let dateCasesKvp = queryFirstEntry.dates; // date-cases key-value pairs {m/d/yy: number cases]}
     let $tbody = $template.find("tbody");
@@ -220,12 +223,29 @@ function renderTable(query, dataSource) {
     Object.keys(dateCasesKvp).forEach(function(date, i) {
         let cases = parseInt(dateCasesKvp[date]);
         let unix = moment(date, "MM/DD/YYYY").valueOf()/1000;
+        window.cumulativeCases = parseInt(cumulativeCases);
         window.cumulativeCases += cases;
+
+        function getPercentChange() {
+            return parseFloat( (cumulativeCases/prevCumulativeCases)*100 ).toFixed(2);
+        }
+
+        let TD_percentChange = `<td style="background-color:lightgreen;">+ 0%</td>`; // default
+        if(prevCumulativeCases>0 && prevCumulativeCases!==cumulativeCases) {
+            let percentChange = getPercentChange();
+            if(percentChange>=100) TD_percentChange = `<td style="background-color:pink;">+ ${percentChange}%</td>`;
+            else if(percentChange>=75) TD_percentChange = `<td style="background-color:#FED8B1;">+ ${percentChange}%</td>`;
+            else if(percentChange>=25) TD_percentChange = `<td style="background-color:lightyellow;">+ ${percentChange}%</td>`;
+            else TD_percentChange = `<td style="background-color:lightgreen;">+ ${percentChange}%</td>`;
+        }
+        window.prevCumulativeCases = cumulativeCases;
+
         $tbody.prepend(`
             <tr>
                 <td data-unix="${unix}">${date}</td>
                 <td>${cases}</td>
                 <td>${cumulativeCases}</td>
+                ${TD_percentChange}
             </tr>
         `);
         window.graphData.push({x:unix, y:cumulativeCases});
@@ -239,15 +259,33 @@ function renderTable(query, dataSource) {
         // debugger;
      });
 
-    let $graph = $template.find(".js-graph");
-    var ctx = $graph[0].getContext("2d");
+     let selfData = [{
+        label: 'Covid-19/Coronavirus Cases',
+        data: window.graphData
+     }];
+     insertGraph($template.find(".js-graph"), selfData);
+
+    let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
+        return anUrlList.area.indexOf(query)!==-1;
+    });
+    // If need render urls
+    if(typeof queryFirstUrls!=="undefined") {
+        var $links = $template.find(".links");
+
+        queryFirstUrls.urls.forEach(url=>{
+            $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
+        });
+    } // queryFirstUrls
+
+    $("#areas").append($template);
+} // renderTable
+
+function insertGraph($parent, datum) { // $DOM to insert, array of data
+    var ctx = $parent[0].getContext("2d");
     var scatterChart = new Chart(ctx, {
         type: 'line',
         data: {
-            datasets: [{
-                label: 'Covid-19/Coronavirus Cases',
-                data: window.graphData
-            }]
+            datasets: datum
         },
         options: {
             tooltips: {
@@ -274,33 +312,45 @@ function renderTable(query, dataSource) {
             }
         }
     });
+} // insertGraph
 
+function getRandomRgb() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
 
-    let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
-        return anUrlList.area.indexOf(query)!==-1;
-    });
-    // If need render urls
-    if(typeof queryFirstUrls!=="undefined") {
-        var $links = $template.find(".links");
+function combineGraphs() {
+    let $combinedGraph = $("#wrapper-combined-graphs");
+    let graphs = [];
 
-        queryFirstUrls.urls.forEach(url=>{
-            $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
+    $(".area").each((i, area) => { 
+        let $cumulativeCases = $(area).find("td:nth-child(3)"); // [$td,...]
+        let cumulativeCases = $cumulativeCases.toArray().map((td)=>parseInt($(td).text())); // [int,...]
+        let $unixs = $(area).find("td:nth-child(1)"); // [$td,...]
+        let unixs = $unixs.toArray().map((td)=>parseInt($(td).attr("data-unix"))); // [int,...]
+
+        window.graphData = [];
+        unixs.forEach( (unix, i) => {
+            let graphCoordinate = {x:0, y:0};
+            graphCoordinate.x = unix;
+            graphCoordinate.y = cumulativeCases[i];
+            window.graphData.push(graphCoordinate);
         });
-    } // queryFirstUrls
 
-    $("#areas").append($template);
-} // renderTable
+        let areaName = $(area).find(".title").attr("data-area"); 
+        
+        let graph = {
+            label: areaName,
+            data: window.graphData,
+            pointBorderColor: getRandomRgb(),
+            borderColor: getRandomRgb()
+         }
+         graphs.push(graph);
+     });
 
-function renderLinksLater() {
-    Object.keys(window.urls).forEach(function(keyArea, i) {
-        var $matchedTitle = $(`.area .title:contains(${keyArea})`).first();
-        if($matchedTitle.length) {
-            var $links = $matchedTitle.closest(".area").find(".links");
-            window.urls[keyArea].forEach(url => {
-                $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
-            });
-        }
-    });
+     let selfData = [];
+
+    insertGraph($combinedGraph, graphs);
 }
 
 var sourcesRetrieving = setInterval(()=> {
@@ -311,6 +361,7 @@ var sourcesRetrieving = setInterval(()=> {
         renderTable("Washington", window.johnHopkins);
         renderTable("New York", window.johnHopkins);
         renderTable("United Kingdom, United Kingdom", window.johnHopkins);
-        renderTable("Italy", window.johnHopkins);
+        // renderTable("Italy", window.johnHopkins);
+        combineGraphs();
     }
 }, 100);

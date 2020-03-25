@@ -73,7 +73,7 @@ file_put_contents("data/yesterday-cumulative.txt", $todaysCumulativeCases);
 
 // Success
 echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA County Public Health, subtract from yesterday's cumulative cases, then append to the daily case breakdown for the app."]);
-die();
+// die();
 
 
 echo "<br/>";
