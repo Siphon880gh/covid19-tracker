@@ -36,21 +36,24 @@ function get_todays_cumulative($view_source) {
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_todays_cumulative($view_source);
 $todaysCumulativeCases = intval($todaysCumulativeCases);
+if($todaysCumulativeCases===0) die();
 // var_dump($todaysCumulativeCases);
-// die();
 
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);
 $hadDumped = json_decode($hadDumped, true);
 date_default_timezone_set("America/Los_Angeles");
 $todaysDate = date("n/j/y", time());
-if(isset($hadDumped[$todaysDate])) 
-	unset($hadDumped[$todaysDate]);
+if(isset($hadDumped[$todaysDate])) unset($hadDumped[$todaysDate]); // removes duplicated entries in case cron job runs multiple times
 $hadDumped[$todaysDate] = $todaysCumulativeCases;
 $hadDumped = array_merge([$todaysDate=>$todaysCumulativeCases], $hadDumped); // similar to array_unshift
 $prettyJson = json_encode($hadDumped, JSON_PRETTY_PRINT);
 $prettyJson = str_replace("\/", "/", $prettyJson);
 file_put_contents($dailyCumulativePath, $prettyJson);
+
+if(isset($_GET["manual"])) {
+	echo sprintf("<script>alert(\"%s\");</script>", "Updating LA County's cumulative cases...");
+}
 
 // Success
 echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA County Public Health, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);

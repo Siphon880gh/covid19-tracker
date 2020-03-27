@@ -21,7 +21,7 @@
     display: block;
 }
 @media (min-width: 768px) {
-    #credits span:not(:first-child) {
+    #credits > span:not(:first-child) {
         margin-left: 20px;
         display: inline;
     }
