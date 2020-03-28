@@ -223,6 +223,7 @@ function convertCumulativeCasesToBreakdownCases(areaObject) { // areaObject with
     Object.keys(areaObject).forEach(function(date, index) {
         let cumulativeCases = parseInt(areaObject[date]);
         areaObject[date] = cumulativeCases - prevCumulativeCases;
+        if(areaObject[date]===0) delete areaObject[date];
         prevCumulativeCases = cumulativeCases;
     });
     return areaObject;
