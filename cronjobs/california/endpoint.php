@@ -1,15 +1,15 @@
 <?php
 /**
- * Problem: The data source we are using is LA County Public Health. They do not have a public API that breaks down the number of cases 
+ * Problem: The data source we are using for California is LA Times. They do not have a public API that breaks down the number of cases 
  * daily in a table. But they do show a counter of cumulative cases that updates daily. 
  * 
  * Solution: Our app downloads the cumulative cases daily with a cron job. The app has an algorithm that converts cumulative cases to
- * daily breakdown cases when a data source such as LA County Public Health's only provides cumulative cases.
+ * daily breakdown cases when a data source only provides cumulative cases.
  */
 
 // Init
-$source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
-$selector = "#content > div.content-padding > table:nth-child(2) > tbody > tr:nth-child(1) > td > strong";
+$source = "https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/"; // Protocol must match http:// on their website as of 3/20/20
+$selector = ".big-numbers > .big-numbers-div .confirmed.text";
 
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
@@ -40,7 +40,6 @@ function get_todays_cumulative($view_source) {
 // Get today's cumulative cases
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_todays_cumulative($view_source);
-$todaysCumulativeCases = intval($todaysCumulativeCases);
 // var_dump($todaysCumulativeCases);
 if($todaysCumulativeCases===0) die();
 
@@ -61,7 +60,7 @@ if(isset($_GET["manual"])) {
 }
 
 // Success
-echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA County Public Health, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);
+echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA Times, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);
 die();
 
 echo "<br/><br/>";

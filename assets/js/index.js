@@ -20,13 +20,14 @@ $.ajaxSetup({
  * Expect window.overrides; {area, dates}
 */
 window.laCounty = [];
+window.window.laTimesCalifornia = [];
 window.johnHopkinsStates = []; // John Hopkins University stopped reporting county levels on 3/10/20 however state levels still available.
 window.johnHopkinsCountries= []; // John Hopkins University stopped reporting state levels on 3/24/20 onwards. So we can only refer to US
 
 window.overrides = [];
 window.urlLists = [];
 window.sourcesRetrieved = 0;
-window.sourcesAllRetrieved = 5; // John Hopkins + LA County + overrides + urlLists
+window.sourcesAllRetrieved = 6; // John Hopkins + LA County + overrides + urlLists
 
 // Csv text where first line are headers
 const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
@@ -106,6 +107,30 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     // debugger;
     window.sourcesRetrieved++;
 })(); // setLaCounty
+
+
+(async function setLaTimesCalifornia() {
+    var response = await fetch("cronjobs/california/data/daily-cumulative.json", {cache: "reload"}, dat=>dat.txt());
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [];
+    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    arr = reverseObject(arr);
+    arr = convertCumulativeCasesToBreakdownCases(arr);
+     
+    // {dates...} => conformedObject { area, title, dates {} }
+    window.laTimesCalifornia = [
+        {
+            area: "California",
+            title: "California",
+            dates: arr
+        }
+    ];
+    
+    console.log("area, title, dates []]", window.laCounty);
+    // debugger;
+    window.sourcesRetrieved++;
+})(); // setLaTimesCalifornia
+
 
 (async function setjohnHopkinsStates() { // reports daily breakdown cases
     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", {cache: "reload"}, dat=>dat.txt());
@@ -437,6 +462,7 @@ var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
         renderTable("Los Angeles", window.laCounty);
+        renderTable("California", window.laTimesCalifornia);
         renderTable("Japan", window.johnHopkinsCountries);
         renderTable("US", window.johnHopkinsCountries);
         renderTable("Italy", window.johnHopkinsCountries);

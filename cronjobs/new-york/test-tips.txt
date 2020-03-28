@@ -1,0 +1,8 @@
+How it works
+
+The daily breakdown is difference between today's cumulative cases (found at LA County Public Health's website) and yesterday's cumulative cases. Yesterday's was saved in yesterday-cumulative.txt. This math calculation for daily breakdowns only trigger when you need to update yesterday-cumulative.txt, by checking if that file's modified date time was yesterday and needs to be updated to today. To trigger this calculation for testing purposes, you have to get a copy of yesterday-cumulative.txt that's modified yesterday. Or, you can manually change the modified date to a day before:
+
+sudo touch -t 202003230100 data/yesterday-cumulative.txt
+             MMDD
+
+Where    YYYYMMDDHHMM
