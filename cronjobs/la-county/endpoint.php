@@ -8,8 +8,9 @@
  */
 
 // Init
-$source = "http://publichealth.lacounty.gov/media/Coronavirus/"; // Protocol must match http:// on their website as of 3/20/20
+$source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
 $dailyCumulativePath = "data/daily-cumulative.json";
+error_reporting(E_ALL ^ E_DEPRECATED);
 require("../includes/phpQuery/phpQuery.php");
 
 // HELPERS
@@ -27,7 +28,7 @@ function get_view_source($url) {
 
 function get_todays_cumulative($view_source) {
     $doc = phpQuery::newDocument($view_source);
-    $todays_cases_cumulative = $doc['.counter-text:eq(0)']->text();
+    $todays_cases_cumulative = $doc['#content > div.content-padding > table:nth-child(2) > tbody > tr:nth-child(1) > td > strong']->text();
     $todays_cases_cumulative = intval($todays_cases_cumulative);
     return $todays_cases_cumulative;
 }
@@ -36,8 +37,8 @@ function get_todays_cumulative($view_source) {
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_todays_cumulative($view_source);
 $todaysCumulativeCases = intval($todaysCumulativeCases);
-if($todaysCumulativeCases===0) die();
 // var_dump($todaysCumulativeCases);
+if($todaysCumulativeCases===0) die();
 
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);

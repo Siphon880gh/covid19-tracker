@@ -52,7 +52,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 } // csvToJson
 
 (async function setOverrides() {
-    var response = await fetch("override-dates-logic/endpoint.php", dat=>dat.txt());
+    var response = await fetch("override-dates-logic/endpoint.php", {cache: "reload"}, dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
@@ -69,7 +69,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setUrls() {
-    var response = await fetch("urls-logic/endpoint.php", dat=>dat.txt());
+    var response = await fetch("urls-logic/endpoint.php", {cache: "reload"}, dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
@@ -86,7 +86,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaCounty() {
-    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", dat=>dat.txt());
+    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", {cache: "reload"}, dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length) arr = JSON.parse(dump, true); // {dates...}
@@ -108,7 +108,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 })(); // setLaCounty
 
 (async function setjohnHopkinsStates() { // reports daily breakdown cases
-    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", dat=>dat.txt());
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", {cache: "reload"}, dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length>0) arr = csvToJson(dump);
@@ -163,7 +163,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setjohnHopkinsCountries() { // // reports daily cumulative cases
-    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", dat=>dat.txt());
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", {cache: "reload"}, dat=>dat.txt());
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length>0) arr = csvToJson(dump);
