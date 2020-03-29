@@ -5,11 +5,17 @@
  * 
  * Solution: Our app downloads the cumulative cases daily with a cron job. The app has an algorithm that converts cumulative cases to
  * daily breakdown cases when a data source such as LA County Public Health's only provides cumulative cases.
+ * 
+ * Usually we use phpQuery select specific DOM. But LA County Public Health keeps messing up on their HTML so instead we opt for finding
+ * two string positions, then eliminating all HTML tags which may or may not contain numbers as part of their attributes, then 
+ * eliminating all non-numerical characters. The remaining numerical characters make up the number of cases.
+ * 
  */
 
 // Init
 $source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
-$selector = "#content > div.content-padding > table:nth-child(2) > tbody > tr:nth-child(1) > td > strong";
+$leftToken = "Laboratory Confirmed Cases (LCC)";
+$rightToken = "</tr>";
 
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
@@ -28,20 +34,25 @@ function get_view_source($url) {
 	return $data;
 }
 
-function get_todays_cumulative($view_source) {
-	global $selector;
-    $doc = phpQuery::newDocument($view_source);
-	$todays_cases_cumulative = $doc[$selector]->text();
-	$todays_cases_cumulative = str_replace(",", "", $todays_cases_cumulative);
-    $todays_cases_cumulative = intval($todays_cases_cumulative);
-    return $todays_cases_cumulative;
-}
+function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
+	// look for a string left of the number
+	$a = strpos($view_source, $leftToken);
+	// look for a string right of the number:
+	$b = strpos($view_source, $rightToken, $a);
+	// extract the string inbetween
+	$partial = substr($view_source, $a, $b-$a);
+	// remove all html tags because their attributes may contain numbers
+	$partial = preg_replace("/<.*?>/m", "", $partial);
+	// then extract only the numbers
+	$partial = preg_replace("/[^0-9]{1,}/m", "", $partial);
+	return $partial;
+} 
 
 // Get today's cumulative cases
 $view_source = get_view_source($source);
-$todaysCumulativeCases = get_todays_cumulative($view_source);
+$todaysCumulativeCases = get_sandwiched_inner_text($view_source, $leftToken, $rightToken);
 $todaysCumulativeCases = intval($todaysCumulativeCases);
-// var_dump($todaysCumulativeCases);
+// var_dump($view_source);
 if($todaysCumulativeCases===0) die();
 
 // Save today's cumulative cases to history
