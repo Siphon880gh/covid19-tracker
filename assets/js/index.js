@@ -387,9 +387,9 @@ function renderTable(query, dataSource) {
         window.prevCumulativeCases = cumulativeCases;
 
         let nowDoubled = "";
-        if(cases>=lastDoubled*2) {
+        if(window.cumulativeCases>=lastDoubled*2) {
             nowDoubled = `<span style="color:red">(2x)</span>`;
-            lastDoubled = cases;
+            lastDoubled = window.cumulativeCases;
         }
         $tbody.prepend(`
             <tr>
@@ -520,8 +520,8 @@ var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
         renderTable("Los Angeles", window.laCounty);
-        renderTable("New York", window.cnnNewYork);
         renderTable("California", window.laTimesCalifornia);
+        renderTable("New York", window.cnnNewYork);
         renderTable("Japan", window.johnHopkinsCountries);
         renderTable("US", window.johnHopkinsCountries);
         renderTable("Italy", window.johnHopkinsCountries);
