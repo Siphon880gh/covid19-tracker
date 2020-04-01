@@ -144,7 +144,7 @@
             </div> <!--/ modal -->
 
             <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <span>Compare:</span>
+                <span id="label-compare">Compare:</span>
                 <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i>1</a>&nbsp;
                 <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i>2</a>&nbsp;
                 <a data-toggle="modal" href="#modal-combined-graphs-3"><i class="fa fa-chart-line"></i>3</a>&nbsp;

@@ -83,6 +83,8 @@
     top: -22.5px;
     margin-top: .25ch;
 }
-.fa-sticky-note {
-
+@media (max-width:768px) {
+    #label-compare {
+        display:none;
+    }
 }
