@@ -115,9 +115,38 @@
                 </div> <!--/ dialog -->
             </div> <!--/ modal -->
 
+
+            <!-- Modal -->
+            <div id="modal-combined-graphs-3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Compare Growth Curves</h4>
+                            <small>
+                            </p>
+                            <p>Compare growth curves of interested areas</p>
+                            </small>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Insert here -->
+                            <canvas></canvas>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> <!--/ footer -->
+                    </div> <!--/ modal-content -->
+
+                </div> <!--/ dialog -->
+            </div> <!--/ modal -->
+
             <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i> View 1</a><br/>
-                <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i> View 2</a>
+                <span>Views:</span>
+                <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i>1</a>&nbsp;
+                <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i>2</a>&nbsp;
+                <a data-toggle="modal" href="#modal-combined-graphs-3"><i class="fa fa-chart-line"></i>3</a>&nbsp;
             </div>
 
     <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
