@@ -1,13 +1,14 @@
 <?php
 /**
  * Problem: The data source we are using for California is LA Times. They do not have a public API that breaks down the number of cases 
- * daily in a table. But they do show a counter of cumulative cases that updates daily. 
+ * daily in a table. But they do show a counter of cumulative cases that updates daily. Another possible source is CNN however I chose
+ * LA Times because it's more local and therefore more accurate.
  * 
  * Solution: Our app downloads the cumulative cases daily with a cron job. The app has an algorithm that converts cumulative cases to
  * daily breakdown cases when a data source only provides cumulative cases.
  *
- * Historic cumulatives at:
- * 
+ * To build the historic cumulative cases, you visit this other json file from CNN:
+ * Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
  *
  */
 
