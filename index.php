@@ -51,6 +51,7 @@
 
             <template id="template-table">
                 <div class="area">
+                    <div class="note"></div>
                     <div class="links"></div>
                     <div class="title" data-area=""></div>
                     <div style="width: 100%; height: 100%">
@@ -143,7 +144,7 @@
             </div> <!--/ modal -->
 
             <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <span>Views:</span>
+                <span>Compare:</span>
                 <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i>1</a>&nbsp;
                 <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i>2</a>&nbsp;
                 <a data-toggle="modal" href="#modal-combined-graphs-3"><i class="fa fa-chart-line"></i>3</a>&nbsp;

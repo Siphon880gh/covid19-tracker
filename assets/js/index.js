@@ -27,8 +27,9 @@ window.johnHopkinsCountries= []; // John Hopkins University stopped reporting st
 
 window.overrides = [];
 window.urlLists = [];
+window.notes = [];
 window.sourcesRetrieved = 0;
-window.sourcesAllRetrieved = 6; // John Hopkins + LA County + CNN + overrides + urlLists
+window.sourcesAllRetrieved = 7; // John Hopkins + LA Public Health for LA County + LA Times for California + CNN for New York + overrides + urlLists + notes
 
 // Csv text where first line are headers
 const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
@@ -54,7 +55,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 } // csvToJson
 
 (async function setOverrides() {
-    var response = await fetch("override-dates-logic/endpoint.php", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("override-dates-logic/endpoint.php", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
@@ -71,7 +72,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setUrls() {
-    var response = await fetch("urls-logic/endpoint.php", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("urls-logic/endpoint.php", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [], arr2 = [];
     if(dump.length) arr = JSON.parse(dump, true);
@@ -86,9 +87,24 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     window.sourcesRetrieved++;
 })(); // setOverrides
 
+(async function setNotes() {
+    var response = await fetch("notes-logic/endpoint.php", {cache: "reload"}, dat=>dat);
+    var dump = await response.text(); // don't use .json() because can't assure it won't be empty
+    var arr = [], arr2 = [];
+    if(dump.length) arr = JSON.parse(dump, true);
+
+    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
+        var area = "";
+        area = filename.replace(".json", "");
+        arr2.push({area:area, note:arr[filename]});
+    });
+    window.notes = arr2;
+    console.log("notes [ { area, note }, ... ]", window.notes);
+    window.sourcesRetrieved++;
+})(); // setOverrides
 
 (async function setLaCounty() {
-    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length) arr = JSON.parse(dump, true); // {dates...}
@@ -111,7 +127,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setCnnNewYork() {
-    var response = await fetch("cronjobs/new-york/data/daily-cumulative.json", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("cronjobs/new-york/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length) arr = JSON.parse(dump, true); // {dates...}
@@ -134,7 +150,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaTimesCalifornia() {
-    var response = await fetch("cronjobs/california/data/daily-cumulative.json", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("cronjobs/california/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length) arr = JSON.parse(dump, true); // {dates...}
@@ -157,7 +173,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 // (async function setjohnHopkinsStates() { // reports daily breakdown cases
-//     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", {cache: "reload"}, dat=>dat.txt());
+//     var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", {cache: "reload"}, dat=>dat);
 //     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
 //     var arr = [];
 //     if(dump.length>0) arr = csvToJson(dump);
@@ -212,7 +228,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setjohnHopkinsCountries() { // // reports daily cumulative cases
-    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", {cache: "reload"}, dat=>dat.txt());
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", {cache: "reload"}, dat=>dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
     if(dump.length>0) arr = csvToJson(dump);
@@ -394,12 +410,14 @@ function renderTable(query, dataSource) {
         // debugger;
      });
 
-     let selfData = [{
+    // Insert graph
+    let selfData = [{
         label: 'Covid-19/Coronavirus Cases',
         data: window.graphData
-     }];
-     insertGraph($template.find(".js-graph"), selfData);
+    }];
+    insertGraph($template.find(".js-graph"), selfData);
 
+    // Insert any links
     let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
         return anUrlList.area.indexOf(query)!==-1;
     });
@@ -411,6 +429,16 @@ function renderTable(query, dataSource) {
             $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
         });
     } // queryFirstUrls
+
+    // Insert any notes
+    let queryFirstNote = window.notes.find((aNote, i)=>{
+        return aNote.area.indexOf(query)!==-1;
+    });
+    if(typeof queryFirstNote!=="undefined") {
+        let $note = $template.find(".note");
+        let note = queryFirstNote.note;
+        $note.html(`<i class="fa fa-sticky-note">`).attr({"title":note,"data-placement":"bottom","data-html":"true"}).tooltip();
+    } // queryFirstNotes
 
     $("#areas").append($template);
 } // renderTable

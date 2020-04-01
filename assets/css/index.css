@@ -56,7 +56,7 @@
     vertical-align: top;
 }
 .fa-link {
-    opacity: 0;
+    /* opacity: 0; */
     margin-left: .5ch;
     font-size: 1rem;
 }
@@ -70,8 +70,19 @@
     color: green;
 }
 .links {
+    opacity: .5;
     position: absolute;
     right: 0;
     top: -22.5px;
     margin-top: .25ch;
+}
+.note {
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: -22.5px;
+    margin-top: .25ch;
+}
+.fa-sticky-note {
+
 }
