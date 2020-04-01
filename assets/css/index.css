@@ -52,6 +52,9 @@
 .area .js-table {
     margin: 0 auto;
 }
+.js-table th {
+    vertical-align: top;
+}
 .fa-link {
     opacity: 0;
     margin-left: .5ch;

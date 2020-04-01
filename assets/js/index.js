@@ -338,7 +338,7 @@ function renderTable(query, dataSource) {
     $table.append(`<thead><tr>
                         <th>Date</th>
                         <th>Cases</th>
-                        <th>Cumulative</th>
+                        <th>Cumulative<br/><small>Doubling Time</small></th>
                         <th>Change</th>
                     </tr></thead>`);
     $table.append("<tbody/>");
@@ -349,6 +349,7 @@ function renderTable(query, dataSource) {
     let dateCasesKvp = queryFirstEntry.dates; // date-cases key-value pairs {m/d/yy: number cases]}
     let $tbody = $template.find("tbody");
 
+    let lastDoubled = 0;
     Object.keys(dateCasesKvp).forEach(function(date, i) {
         let cases = parseInt(dateCasesKvp[date]);
         let unix = moment(date, "MM/DD/YYYY").valueOf()/1000;
@@ -369,11 +370,16 @@ function renderTable(query, dataSource) {
         }
         window.prevCumulativeCases = cumulativeCases;
 
+        let nowDoubled = "";
+        if(cases>=lastDoubled*2) {
+            nowDoubled = `<span style="color:red">(2x)</span>`;
+            lastDoubled = cases;
+        }
         $tbody.prepend(`
             <tr>
                 <td data-unix="${unix}">${date}</td>
                 <td>${cases}</td>
-                <td>${cumulativeCases}</td>
+                <td>${cumulativeCases} ${nowDoubled}</td>
                 ${TD_percentChange}
             </tr>
         `);
@@ -501,6 +507,7 @@ var sourcesRetrieving = setInterval(()=> {
                             $(".area:has(.title[data-area='Italy'])"),
                         ]
         combineGraphs($("#modal-combined-graphs-1 canvas"), arr$areas1);
+        $("[href='#modal-combined-graphs-1']").attr({"title":"See US, LA, Japan, Italy","data-placement":"bottom"}).tooltip();
 
 
         const arr$areas2 = [
@@ -508,11 +515,14 @@ var sourcesRetrieving = setInterval(()=> {
             $(".area:has(.title[data-area='Japan'])")
         ]
         combineGraphs($("#modal-combined-graphs-2 canvas"), arr$areas2);
+        $("[href='#modal-combined-graphs-2']").attr({"title":"Compare LA with Japan","data-placement":"bottom"}).tooltip();
+
 
         const arr$areas3 = [
             $(".area:has(.title[data-area='Los Angeles'])"),
             $(".area:has(.title[data-area='New York'])")
         ]
         combineGraphs($("#modal-combined-graphs-3 canvas"), arr$areas3);
+        $("[href='#modal-combined-graphs-3']").attr({"title":"Compare LA with New York","data-placement":"bottom"}).tooltip();
     }
 }, 100);
