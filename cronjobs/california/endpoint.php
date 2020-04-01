@@ -5,6 +5,10 @@
  * 
  * Solution: Our app downloads the cumulative cases daily with a cron job. The app has an algorithm that converts cumulative cases to
  * daily breakdown cases when a data source only provides cumulative cases.
+ *
+ * Historic cumulatives at:
+ * 
+ *
  */
 
 // Init
