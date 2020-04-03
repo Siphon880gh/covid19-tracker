@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetch = require("../../node_modules/node-fetch");
 
 let url = "https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/data.json";
 async function a() {
