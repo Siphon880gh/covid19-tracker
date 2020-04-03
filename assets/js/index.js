@@ -354,7 +354,7 @@ function renderTable(query, dataSource) {
     $table.append(`<thead><tr>
                         <th>Date</th>
                         <th>Cases</th>
-                        <th>Cumulative<br/><small>Doubling Time</small></th>
+                        <th>Cumulative<br/><small>Doubling<br/>Time</small></th>
                         <th>Change</th>
                     </tr></thead>`);
     $table.append("<tbody/>");
@@ -379,10 +379,10 @@ function renderTable(query, dataSource) {
         let TD_percentChange = `<td style="background-color:lightgreen;">+ 0%</td>`; // default
         if(prevCumulativeCases>0 && prevCumulativeCases!==cumulativeCases) {
             let percentChange = getPercentChange();
-            if(percentChange>=100) TD_percentChange = `<td style="background-color:pink;">+ ${percentChange}%</td>`;
-            else if(percentChange>=75) TD_percentChange = `<td style="background-color:#FED8B1;">+ ${percentChange}%</td>`;
-            else if(percentChange>=25) TD_percentChange = `<td style="background-color:lightyellow;">+ ${percentChange}%</td>`;
-            else TD_percentChange = `<td style="background-color:lightgreen;">+ ${percentChange}%</td>`;
+            if(percentChange>=100) TD_percentChange = `<td class="percent-change" style="background-color:pink;">${percentChange}%</td>`;
+            else if(percentChange>=75) TD_percentChange = `<td class="percent-change" style="background-color:#FED8B1;">${percentChange}%</td>`;
+            else if(percentChange>=25) TD_percentChange = `<tdclass="percent-change" style="background-color:lightyellow;">${percentChange}%</td>`;
+            else TD_percentChange = `<td class="percent-change" style="background-color:lightgreen;">+ ${percentChange}%</td>`;
         }
         window.prevCumulativeCases = cumulativeCases;
 
@@ -530,6 +530,19 @@ var sourcesRetrieving = setInterval(()=> {
         renderTable("Italy", window.johnHopkinsCountries);
         renderTable("55.3781, -3.436", window.johnHopkinsCountries); // United Kingdom
 
+        // Standardize table heights
+        // var heights = $(".area").map((i,area)=>$(area).height()).toArray();
+        // var maxHeight = Math.max.apply(null, heights);
+        // $(".area").height(maxHeight);
+
+        // Compare dropdown on change
+        $("#compare-view").on("blur", ev=>{
+            let value = ev.target.value;
+            if(value.length===0) return false;
+            let modal = value; // "#modal-combined-graphs-1"
+            $(modal).modal("show");
+        });
+
         // Init graph views
         const arr$areas1 = [
                             $(".area:has(.title[data-area='US'])"), 
@@ -538,7 +551,7 @@ var sourcesRetrieving = setInterval(()=> {
                             $(".area:has(.title[data-area='Italy'])"),
                         ]
         combineGraphs($("#modal-combined-graphs-1 canvas"), arr$areas1);
-        $("[href='#modal-combined-graphs-1']").attr({"title":"See US, LA, Japan, Italy","data-placement":"bottom"}).tooltip();
+        $("#compare-view").append(`<option value="#modal-combined-graphs-1">Interested Cities</option>`);
 
 
         const arr$areas2 = [
@@ -546,7 +559,7 @@ var sourcesRetrieving = setInterval(()=> {
             $(".area:has(.title[data-area='Japan'])")
         ]
         combineGraphs($("#modal-combined-graphs-2 canvas"), arr$areas2);
-        $("[href='#modal-combined-graphs-2']").attr({"title":"Compare LA with Japan","data-placement":"bottom"}).tooltip();
+        $("#compare-view").append(`<option value="#modal-combined-graphs-2">LA and Japan</option>`);
 
 
         const arr$areas3 = [
@@ -554,6 +567,6 @@ var sourcesRetrieving = setInterval(()=> {
             $(".area:has(.title[data-area='New York'])")
         ]
         combineGraphs($("#modal-combined-graphs-3 canvas"), arr$areas3);
-        $("[href='#modal-combined-graphs-3']").attr({"title":"Compare LA with New York","data-placement":"bottom"}).tooltip();
+        $("#compare-view").append(`<option value="#modal-combined-graphs-3">LA and NY</option>`);
     }
 }, 100);

@@ -50,15 +50,17 @@
 
             <template id="template-table">
                 <div class="area">
-                    <div class="note"></div>
-                    <div class="links"></div>
-                    <div class="title" data-area=""></div>
-                    <div style="width: 100%; height: 100%">
-                        <canvas class="js-graph"></canvas>
-                        <div class="formula"></div>
+                    <div class="area-inner">
+                        <div class="note"></div>
+                        <div class="links"></div>
+                        <div class="title" data-area=""></div>
+                        <div style="width: 100%; height: 100%">
+                            <canvas class="js-graph"></canvas>
+                            <div class="formula"></div>
+                        </div>
+                        <table class="js-table table-bordered table-striped">
+                        </table>
                     </div>
-                    <table class="js-table table-bordered table-striped">
-                    </table>
                 </div>
             </template>
 
@@ -143,10 +145,10 @@
             </div> <!--/ modal -->
 
             <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <span id="label-compare">Compare:</span>
-                <a data-toggle="modal" href="#modal-combined-graphs-1"><i class="fa fa-chart-line"></i>1</a>&nbsp;
-                <a data-toggle="modal" href="#modal-combined-graphs-2"><i class="fa fa-chart-line"></i>2</a>&nbsp;
-                <a data-toggle="modal" href="#modal-combined-graphs-3"><i class="fa fa-chart-line"></i>3</a>&nbsp;
+                <label for="compare-view">Compare:</label>
+                    <select id="compare-view">
+                        <option value=""></option>
+                    </select>
             </div>
 
     <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
