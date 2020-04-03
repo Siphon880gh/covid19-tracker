@@ -13,10 +13,12 @@
  */
 
 // Init
-$source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
-$leftToken = "Laboratory Confirmed Cases (LCC)";
-$rightToken = "</tr>";
-
+// $source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
+// $leftToken = "Laboratory Confirmed Cases (LCC)";
+// $rightToken = "</tr>";
+$source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js";
+$leftToken = "count";
+$rightToken = "death";
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
 require("../includes/phpQuery/phpQuery.php");

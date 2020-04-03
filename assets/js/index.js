@@ -388,7 +388,10 @@ function renderTable(query, dataSource) {
 
         let nowDoubled = "";
         if(window.cumulativeCases>=lastDoubled*2) {
-            nowDoubled = `<span style="color:red">(2x)</span>`;
+            nowDoubled = `<span class="clickable" style="color:red" onclick="$(this).children().toggleClass('hide');">
+                            <span>(2x)</span>
+                            <span class="hide">${window.cumulativeCases*2}</span>
+                          </span>`;
             lastDoubled = window.cumulativeCases;
         }
         $tbody.prepend(`
