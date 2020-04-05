@@ -353,7 +353,7 @@ function renderTable(query, dataSource) {
     let $table = $template.find(".js-table");
     $table.append(`<thead><tr>
                         <th>Date</th>
-                        <th>New Cases</th>
+                        <th>New<br/>Cases</th>
                         <th>Cumulative<br/><small>Doubling<br/>Time</small></th>
                         <th>Change</th>
                     </tr></thead>`);

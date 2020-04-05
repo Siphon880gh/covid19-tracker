@@ -8,13 +8,16 @@
  * daily breakdown cases when a data source only provides cumulative cases.
  *
  * To build the historic cumulative cases, you visit this other json file from CNN:
- * Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * Recent Historics is here: https://ix.cnn.io/data/novel-coronavirus-2019-ncov/us/historical.min.json
+ * Older Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * If the historics get too old, find the app.js file from https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/, then find the historical json (check all of them)
+ * Note that there may be discrepancies between the CNN source and the current source based on their methods of collecting data.
  *
  */
 
 // Init
 $source = "https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/"; // Protocol must match http:// on their website as of 3/20/20
-$selector = ".big-numbers > .big-numbers-div .confirmed.text";
+$selector = ".big-number";
 
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
@@ -46,7 +49,10 @@ function get_todays_cumulative($view_source) {
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_todays_cumulative($view_source);
 // var_dump($todaysCumulativeCases);
-if($todaysCumulativeCases===0) die();
+if($todaysCumulativeCases===0) {
+	echo json_encode(["error"=>"Is 0.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
+	die();
+}
 
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);
@@ -65,7 +71,7 @@ if(isset($_GET["manual"])) {
 }
 
 // Success
-echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA Times, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);
+echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA Times, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
 die();
 
 echo "<br/><br/>";

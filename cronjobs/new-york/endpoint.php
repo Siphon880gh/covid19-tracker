@@ -16,8 +16,12 @@ if (!empty($argv[1])) {
  * The CNN website that displays the json file: https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/
  * json file is at https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/data.json
  * 
- * To build the historic cumulative cases, you visit this other json file that stores the historics
- * Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * To build the historic cumulative cases, you visit this other json file from CNN:
+ * Recent Historics is here: https://ix.cnn.io/data/novel-coronavirus-2019-ncov/us/historical.min.json
+ * Older Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * If the historics get too old, find the app.js file from https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/, then find the historical json (check all of them)
+ * Note that there may be discrepancies between the CNN source and the current source based on their methods of collecting data.
+ * 
  */
 
 if(!isset($_GET["next"])) {
@@ -31,6 +35,10 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 
 // Get today's cumulative cases
 $todaysCumulativeCases = intval($_GET["next"]);
+if($todaysCumulativeCases===0) {
+	echo json_encode(["error"=>"Is 0.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
+	die();
+}
 
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);
@@ -50,7 +58,7 @@ if(isset($_GET["manual"])) {
 }
 
 // Success
-echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from CNN, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);
+echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from CNN, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
 die();
 
 echo "\n\n\n";
