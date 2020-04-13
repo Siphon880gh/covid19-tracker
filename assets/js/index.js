@@ -525,8 +525,8 @@ var sourcesRetrieving = setInterval(()=> {
         renderTable("Los Angeles", window.laCounty);
         renderTable("California", window.laTimesCalifornia);
         renderTable("New York", window.cnnNewYork);
-        renderTable("Japan", window.johnHopkinsCountries);
         renderTable("US", window.johnHopkinsCountries);
+        renderTable("Japan", window.johnHopkinsCountries);
         renderTable("Italy", window.johnHopkinsCountries);
         renderTable("55.3781, -3.436", window.johnHopkinsCountries); // United Kingdom
 
