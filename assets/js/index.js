@@ -536,17 +536,20 @@ var sourcesRetrieving = setInterval(()=> {
         // $(".area").height(maxHeight);
 
         // Compare dropdown on change
-        $("#compare-view").on("blur", ev=>{
+        $("#compare-view").on("change", ev=>{
             let value = ev.target.value;
             if(value.length===0) return false;
             let modal = value; // "#modal-combined-graphs-1"
             $(modal).modal("show");
+            $("#compare-view").val("");
         });
 
         // Init graph views
         const arr$areas1 = [
                             $(".area:has(.title[data-area='US'])"), 
                             $(".area:has(.title[data-area='Los Angeles'])"),
+                            $(".area:has(.title[data-area='California'])"),
+                            $(".area:has(.title[data-area='New York'])"),
                             $(".area:has(.title[data-area='Japan'])"),
                             $(".area:has(.title[data-area='Italy'])"),
                         ]

@@ -9,8 +9,12 @@ if (!empty($argv[1])) {
  */
 
 // Init
-$source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/04-12-2020.csv";
+// Daily reports are new files named by the date. So we build the URL with the current date. 
+date_default_timezone_set("America/Los_Angeles");
+$todaysDate = date("m-d-Y", time()); // ##/##/####
+$source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/$todaysDate.csv";
 $dailyCumulativePath = "data/daily-cumulative.json";
+// echo $source; die();
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 // Get today's cumulative cases
@@ -66,8 +70,7 @@ if($todaysCumulativeCases===0) {
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);
 $hadDumped = json_decode($hadDumped, true);
-// var_dump($hadDumped);
-date_default_timezone_set("America/Los_Angeles");
+date_default_timezone_set("America/Los_Angeles"); // Dup allowed because this is a boilerplate
 $todaysDate = date("n/j/y", time());
 if(isset($hadDumped[$todaysDate])) unset($hadDumped[$todaysDate]); // removes duplicated entries in case cron job runs multiple times
 $hadDumped[$todaysDate] = $todaysCumulativeCases;
@@ -82,7 +85,7 @@ if(isset($_GET["manual"])) {
 }
 
 // Success
-echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from CNN, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
+echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from John Hopkins University, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases, "php.source"=>$source]);
 die();
 
 echo "\n\n\n";

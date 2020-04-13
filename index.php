@@ -75,7 +75,7 @@
                             <h4 class="modal-title">Compare Growth Curves</h4>
                             <small>
                             </p>
-                            <p>Compare growth curves of interested areas</p>
+                            <p>Compare growth curves of interested areas. Contact Weng Fei Fung if you want more comparisons.</p>
                             </small>
                         </div>
                         <div class="modal-body">
@@ -102,7 +102,7 @@
                             <h4 class="modal-title">Compare Growth Curves</h4>
                             <small>
                             </p>
-                            <p>Compare growth curves of interested areas</p>
+                            <p>Compare growth curves of interested areas. Contact Weng Fei Fung if you want more comparisons.</p>
                             </small>
                         </div>
                         <div class="modal-body">
@@ -129,7 +129,7 @@
                             <h4 class="modal-title">Compare Growth Curves</h4>
                             <small>
                             </p>
-                            <p>Compare growth curves of interested areas</p>
+                            <p>Compare growth curves of interested areas. Contact Weng Fei Fung if you want more comparisons.</p>
                             </small>
                         </div>
                         <div class="modal-body">
