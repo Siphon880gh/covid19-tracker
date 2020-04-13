@@ -83,6 +83,9 @@
     top: -22.5px;
     margin-top: .25ch;
 }
+#nav-global {
+    transition: right 2s;
+}
 #compare-view {
     width: 22px;
 }

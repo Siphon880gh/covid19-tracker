@@ -144,11 +144,17 @@
                 </div> <!--/ dialog -->
             </div> <!--/ modal -->
 
-            <div id="nav-global" style="position:absolute; top:10px; right:10px;">
-                <label for="compare-view">Compare:</label>
+            <div id="nav-global-mobile-toggle" style="position:absolute; top:0; right: 10px; z-index:1;">
+                <a href="javascript:void(0)" onclick='$("#nav-global").css("right", "10px");'><</a>
+            </div>
+
+            <div id="nav-global" style="position:absolute; top:0; right:-100%; z-index:2; background-color:white;">
+                <label for="compare-view">Compare Views:</label>
                     <select id="compare-view">
                         <option value=""></option>
                     </select>
+                    <span>&nbsp;</span>
+                    <a href="javascript:void(0)" onclick='$("#nav-global").css("right", "-100%");'>></a>
             </div>
 
     <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
