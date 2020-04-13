@@ -4,64 +4,41 @@ if (!empty($argv[1])) {
 }
 
 /**
- * John Hopkins university reopened state reporting. CNN refers to them now.
+ * Problem: CNN does not let you directly download the table because it's dynamically replaced with a json (refer to url). I used cURL on
+ * the json but it returns raw binary data. I couldn't convert that data to text using raw binary converters. Json actually returns if you
+ * do fetch or ajax but that's not in PHP anymore, so the logic here is from JS => PHP.
+ * 
+ * Solution: Have cronjob run endpoint.js instead. Endpoint.js will pull the ajax information then call endpoint.php to place the newest 
+ * cumulative cases into the data json file. Why not have all the code in endpoint.js? Because other cronjobs already have the php logic
+ * figured out for placing the cumulative cases into the json file.
+ * 
+ * Quality control:
+ * The CNN website that displays the json file: https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/
+ * json file is at https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/data.json
+ * 
+ * To build the historic cumulative cases, you visit this other json file from CNN:
+ * Recent Historics is here: https://ix.cnn.io/data/novel-coronavirus-2019-ncov/us/historical.min.json
+ * Older Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * If the historics get too old, find the app.js file from https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/, then find the historical json (check all of them)
+ * Note that there may be discrepancies between the CNN source and the current source based on their methods of collecting data.
  * 
  */
 
+if(!isset($_GET["next"])) {
+	echo json_encode(["error"=>"First step missing. We run node process endpoint.js to pull the information from CNN, and then put the information here to endpoint.php"]);
+	die();
+}
+
 // Init
-$source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/04-12-2020.csv";
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 // Get today's cumulative cases
-
-function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
-	// look for a string left of the number
-	$a = strpos($view_source, $leftToken);
-	// look for a string right of the number:
-	$b = strpos($view_source, $rightToken, $a);
-	// extract the string inbetween
-	$partial = substr($view_source, $a, $b-$a);
-	// remove all html tags because their attributes may contain numbers
-	$partial = preg_replace("/<.*?>/m", "", $partial);
-	// then extract only the numbers
-	$partial = preg_replace("/[^0-9,]{1,}/m", "", $partial);
-	return $partial;
-} 
-
-function getCommaPositionText($partial, $pos) {
-	$items = explode(",", $partial);
-	// var_dump($items); die();
-	$extracted = "0"; // default
-	$extracted = $items[$pos];
-	return intval($extracted);
-}
-
-function getTodaysCumulativeCases() {
-	global $source;
-	$ch = curl_init();
-	$timeout = 5;
-	curl_setopt($ch, CURLOPT_URL, $source);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-	$data = curl_exec($ch);
-	curl_close($ch);
-
-	$text = $data; // ...New York,US,###,###,...California,US,###,###,...
-	$ny_partial = get_sandwiched_inner_text($text, "New York,US", "USA"); // ###,###,...
-	// var_dump($partial); die();
-	
-	$ny_cases = getCommaPositionText($ny_partial, 5); // 5th value on a csv line is cases
-	return $ny_cases;
-}
-$todaysCumulativeCases = getTodaysCumulativeCases();
+$todaysCumulativeCases = intval($_GET["next"]);
 if($todaysCumulativeCases===0) {
 	echo json_encode(["error"=>"Is 0.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
 	die();
 }
-
-// echo $todaysCumulativeCases;
-// die();
 
 // Save today's cumulative cases to history
 $hadDumped = file_get_contents($dailyCumulativePath);
@@ -74,7 +51,6 @@ $hadDumped[$todaysDate] = $todaysCumulativeCases;
 $hadDumped = array_merge([$todaysDate=>$todaysCumulativeCases], $hadDumped); // similar to array_unshift
 $prettyJson = json_encode($hadDumped, JSON_PRETTY_PRINT);
 $prettyJson = str_replace("\/", "/", $prettyJson);
-// var_dump($hadDumped); die();
 file_put_contents($dailyCumulativePath, $prettyJson);
 
 if(isset($_GET["manual"])) {

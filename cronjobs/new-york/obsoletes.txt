@@ -1,0 +1,5 @@
+Obsolete 2:
+Obsoleted because CNN started using John Hopkins University who resumed state-level daily reporting. Previously was getting the gzip-json from CNN and unzipping it.
+
+Obsolete 1:
+It never worked. Failed attempt to get the json from CNN using node js, then feeding it into php to change the daily-cumulative.json. It failed because cronjobs cannot handle async like that.

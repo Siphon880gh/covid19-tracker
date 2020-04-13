@@ -4,39 +4,27 @@ if (!empty($argv[1])) {
 }
 
 /**
- * John Hopkins university reopened state reporting. CNN refers to them now.
+ * Problem/Solution: CNN does not let you directly download the table because it's dynamically replaced with a json (refer to json url). I used cURL on
+ * the json but it returns gzip data. So I am adding a new layer of code that unzips the gzip for json.
+ * 
+ * Quality control:
+ * The CNN website that displays the json file: https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/
+ * json file is at https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/data.json
+ * 
+ * To build the historic cumulative cases, you visit this other json file from CNN:
+ * Recent Historics is here: https://ix.cnn.io/data/novel-coronavirus-2019-ncov/us/historical.min.json
+ * Older Historics is here: https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/covid19-historical-by-state.json
+ * If the historics get too old, find the app.js file from https://www.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/, then find the historical json (check all of them)
+ * Note that there may be discrepancies between the CNN source and the current source based on their methods of collecting data.
  * 
  */
 
 // Init
-$source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/04-12-2020.csv";
+$source = "https://ix.cnn.io/dailygraphics/graphics/20200306-us-covid19/data.json";
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 // Get today's cumulative cases
-
-function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
-	// look for a string left of the number
-	$a = strpos($view_source, $leftToken);
-	// look for a string right of the number:
-	$b = strpos($view_source, $rightToken, $a);
-	// extract the string inbetween
-	$partial = substr($view_source, $a, $b-$a);
-	// remove all html tags because their attributes may contain numbers
-	$partial = preg_replace("/<.*?>/m", "", $partial);
-	// then extract only the numbers
-	$partial = preg_replace("/[^0-9,]{1,}/m", "", $partial);
-	return $partial;
-} 
-
-function getCommaPositionText($partial, $pos) {
-	$items = explode(",", $partial);
-	// var_dump($items); die();
-	$extracted = "0"; // default
-	$extracted = $items[$pos];
-	return intval($extracted);
-}
-
 function getTodaysCumulativeCases() {
 	global $source;
 	$ch = curl_init();
@@ -46,12 +34,22 @@ function getTodaysCumulativeCases() {
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 	$data = curl_exec($ch);
 	curl_close($ch);
+	$data = gzdecode($data); // unzip
+	$obj_type = json_decode($data, true);
+	$states = $obj_type["data"];
+	$ny = [];
 
-	$text = $data; // ...New York,US,###,###,...California,US,###,###,...
-	$ny_partial = get_sandwiched_inner_text($text, "New York,US", "USA"); // ###,###,...
-	// var_dump($partial); die();
+	for($i=0; $i<count($states); $i++) {
+		$state = $states[$i];
+		if($state["name"]==="New York") {
+			$ny = $state;
+			break;
+		} // if
+	} // for
+
+	$ny_cases = 0;
+	$ny_cases = @$ny["cases"];
 	
-	$ny_cases = getCommaPositionText($ny_partial, 5); // 5th value on a csv line is cases
 	return $ny_cases;
 }
 $todaysCumulativeCases = getTodaysCumulativeCases();
