@@ -34,11 +34,12 @@
 }
 .area {
     position: relative;
-    float: left;
     display: inline-block;
+    min-width: 200px;
+    vertical-align: top;
     margin: 10px;
-    border: 1px solid black;
     padding: 5px;
+    border: 1px solid black;
 }
 .area .title {
     font-weight: 800;
@@ -109,7 +110,7 @@
     } */
     .area {
         margin: 10px;
-        float: none !important;
+        display: block;
     }
 
 }
