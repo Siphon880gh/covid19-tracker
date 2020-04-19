@@ -53,8 +53,17 @@
 .area .js-table {
     margin: 0 auto;
 }
-.js-table th {
+.js-table th, .js-table td {
     vertical-align: top;
+}
+.doubling-time::before {
+    content: "Doubled ";
+}
+.doubling-time::after {
+    content: " days";
+}
+.predict-doubling-time::before {
+    content: "Next at "
 }
 .fa-link {
     /* opacity: 0; */
@@ -110,7 +119,11 @@
     } */
     .area {
         margin: 10px;
+        margin-top: 20px;
         display: block;
     }
 
+}
+.hidden {
+    visibility: hidden;
 }

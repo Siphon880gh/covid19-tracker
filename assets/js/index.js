@@ -366,6 +366,8 @@ function renderTable(query, dataSource) {
     let $tbody = $template.find("tbody");
 
     let lastDoubled = 0;
+    let countingTillDoubled = 1;
+    let firstDoubledEver = true;
     Object.keys(dateCasesKvp).forEach(function(date, i) {
         let cases = parseInt(dateCasesKvp[date]);
         let unix = moment(date, "MM/DD/YYYY").valueOf()/1000;
@@ -386,13 +388,16 @@ function renderTable(query, dataSource) {
         }
         window.prevCumulativeCases = cumulativeCases;
 
+        countingTillDoubled++;
         let nowDoubled = "";
         if(window.cumulativeCases>=lastDoubled*2) {
-            nowDoubled = `<span class="clickable" style="color:red" onclick="$(this).children().toggleClass('hide');">
-                            <span>(2x)</span>
-                            <span class="hide">${window.cumulativeCases*2}</span>
+            if(firstDoubledEver) { firstDoubledEver=false; countingTillDoubled=1; } // case first doubled for the table
+            nowDoubled = `<br/><span class="clickable" style="color:red" onclick="$(this).children().toggleClass('hidden');">
+                            <span class="doubling-time">${countingTillDoubled}</span>
+                            <span class="predict-doubling-time hidden">${window.cumulativeCases*2}</span>
                           </span>`;
             lastDoubled = window.cumulativeCases;
+            countingTillDoubled = 0;
         }
         $tbody.prepend(`
             <tr>
