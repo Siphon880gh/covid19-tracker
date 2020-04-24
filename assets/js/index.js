@@ -490,6 +490,45 @@ function getRandomRgb() {
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
+
+function zoomGraphs($canva, arr$areas) {
+    let graphs = [];
+
+    arr$areas.forEach(($area, i) => { 
+        let $cumulativeCases = $area.find("td:nth-child(3)"); // [$td,...]
+        let cumulativeCases = $cumulativeCases.toArray().map((td)=>parseInt($(td).text())); // [int,...]
+        let $unixs = $area.find("td:nth-child(1)"); // [$td,...]
+        let unixs = $unixs.toArray().map((td)=>parseInt($(td).attr("data-unix"))); // [int,...]
+
+        // Only show last 14 days so the graph is easier to eye
+        cumulativeCases.splice(-14);
+        unixs.splice(-14);
+
+        window.graphData = [];
+        unixs.forEach( (unix, i) => {
+            let graphCoordinate = {x:0, y:0};
+            graphCoordinate.x = unix;
+            graphCoordinate.y = cumulativeCases[i];
+            window.graphData.push(graphCoordinate);
+        });
+
+        let areaName = $area.find(".title").attr("data-area"); 
+        let randomColor = getRandomRgb();
+        
+        let graph = {
+            label: areaName,
+            data: window.graphData,
+            pointBorderColor: randomColor,
+            borderColor: randomColor
+         }
+         graphs.push(graph);
+     });
+
+     let selfData = [];
+
+    insertGraph($canva, graphs);
+}
+
 function combineGraphs($canva, arr$areas) {
     let graphs = [];
 
@@ -540,17 +579,23 @@ var sourcesRetrieving = setInterval(()=> {
         // var maxHeight = Math.max.apply(null, heights);
         // $(".area").height(maxHeight);
 
-        // Compare dropdown on change
-        $("#compare-view").on("change", ev=>{
+        // More graphs' dropdown's onchange
+        $("#more-graphs").on("change", ev=>{
             let value = ev.target.value;
             if(value.length===0) return false;
             let modal = value; // "#modal-combined-graphs-1"
             $(modal).modal("show");
-            $("#compare-view").val("");
+            $("#more-graphs").val("");
         });
 
         // Init graph views
-        const arr$areas1 = [
+        const arr$areas0 = [
+            $(".area:has(.title[data-area='Los Angeles'])")
+        ]
+        zoomGraphs($("#modal-zoomed-graphs-0 canvas"), arr$areas0);
+        $("#more-graphs").append(`<option value="#modal-zoomed-graphs-0">Zoomed Los Angeles</option>`);
+
+        const arr$areas1= [
                             $(".area:has(.title[data-area='US'])"), 
                             $(".area:has(.title[data-area='Los Angeles'])"),
                             $(".area:has(.title[data-area='California'])"),
@@ -559,7 +604,7 @@ var sourcesRetrieving = setInterval(()=> {
                             $(".area:has(.title[data-area='Italy'])"),
                         ]
         combineGraphs($("#modal-combined-graphs-1 canvas"), arr$areas1);
-        $("#compare-view").append(`<option value="#modal-combined-graphs-1">Interested Cities</option>`);
+        $("#more-graphs").append(`<option value="#modal-combined-graphs-1">Interested Cities</option>`);
 
 
         const arr$areas2 = [
@@ -567,7 +612,7 @@ var sourcesRetrieving = setInterval(()=> {
             $(".area:has(.title[data-area='Japan'])")
         ]
         combineGraphs($("#modal-combined-graphs-2 canvas"), arr$areas2);
-        $("#compare-view").append(`<option value="#modal-combined-graphs-2">LA and Japan</option>`);
+        $("#more-graphs").append(`<option value="#modal-combined-graphs-2">LA and Japan</option>`);
 
 
         const arr$areas3 = [
@@ -575,6 +620,6 @@ var sourcesRetrieving = setInterval(()=> {
             $(".area:has(.title[data-area='New York'])")
         ]
         combineGraphs($("#modal-combined-graphs-3 canvas"), arr$areas3);
-        $("#compare-view").append(`<option value="#modal-combined-graphs-3">LA and NY</option>`);
+        $("#more-graphs").append(`<option value="#modal-combined-graphs-3">LA and NY</option>`);
     }
 }, 100);

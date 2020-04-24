@@ -40,8 +40,8 @@
             <div id="title">Covid-19 Growth <i class="fas fa-first-aid"></i></div>
             <div id="desc">Find out how fast the virus is growing in your area. <a href="mailto:weffung@ucdavis.edu">Contact me</a> to request other areas.</div>
             <div id="credits">
-                <span class="authored">Weng Fei Fung</span>
-                <span class="source">Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University<a href="javascript:void()" onclick="$(this).next().toggle();">...</a><span style="display:none;"> There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></span>
+                <span class="authored">By Weng Fei Fung</span>
+                <span class="source">4/20/20 Los Angeles received a dramatic increase of cases from new antibody tests and the reporting of 880 test results backlogged at test labs. Other Los Angeles notes: Monday/Tuesday numbers tend to spike up as weekend results catch up. General Notes: Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University<a href="javascript:void()" onclick="$(this).next().toggle();">...</a><span style="display:none;"> There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></span>
             </div>
             
             <br/>
@@ -63,6 +63,33 @@
                     </div>
                 </div>
             </template>
+
+            <!-- Modal -->
+            <div id="modal-zoomed-graphs-0" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Zoomed Graph</h4>
+                            <small>
+                            </p>
+                            <p>Shows only the last two weeks so you can more easily eye the graph for peaks or waves.<br/>Contact Weng Fei Fung if you want more graphs.</p>
+                            </small>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Insert here -->
+                            <canvas></canvas>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> <!--/ footer -->
+                    </div> <!--/ modal-content -->
+
+                </div> <!--/ dialog -->
+            </div> <!--/ modal -->
+
 
             <!-- Modal -->
             <div id="modal-combined-graphs-1" class="modal fade" role="dialog">
@@ -149,8 +176,8 @@
             </div>
 
             <div id="nav-global" style="position:absolute; top:0; right:-100%; z-index:2; background-color:white;">
-                <label for="compare-view">Compare Views:</label>
-                    <select id="compare-view">
+                <label for="more-graphs">More Graphs:</label>
+                    <select id="more-graphs">
                         <option value=""></option>
                     </select>
                     <span>&nbsp;</span>

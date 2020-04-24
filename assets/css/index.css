@@ -96,11 +96,11 @@
 #nav-global {
     transition: right 2s;
 }
-#compare-view {
+#more-graphs {
     width: 22px;
 }
 @media (max-width:768px) {
-    label[for='compare-view'] {
+    label[for='more-graphs'] {
         /* display:none; */
     }
     .area th, .area td {
