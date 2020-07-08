@@ -1,5 +1,5 @@
 [
-    "http://publichealth.lacounty.gov/media/Coronavirus/",
+    "http://publichealth.lacounty.gov/media/Coronavirus/data/",
     "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm",
     "https://twitter.com/lapublichealth",
     "cronjobs/la-county/endpoint.php?manual"
