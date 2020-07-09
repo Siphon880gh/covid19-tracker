@@ -33,12 +33,12 @@ function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
 	return $partial;
 } 
 
-function getCommaPositionText($partial, $pos, $source) {
+function getCommaPositionText($partial, $pos, $full, $source) {
 	$items = explode(",", $partial);
 	// var_dump($items); die();
 	$extracted = "0"; // default
 	if(!isset($items[$pos])) {
-		echo json_encode(["error"=>"Undefined offset: 5", "partial"=>$partial, "pos"=>$pos, "source"=>$source]);
+		echo json_encode(["error"=>"Undefined offset: 5", "partial"=>$partial, "full"=>$full, "pos"=>$pos, "source"=>$source]);
 		die();
 	}
 	$extracted = $items[$pos];
@@ -56,10 +56,10 @@ function getTodaysCumulativeCases() {
 	curl_close($ch);
 
 	$text = $data; // ...New York,US,###,###,...California,US,###,###,...
-	$ny_partial = get_sandwiched_inner_text($text, "New York,US", "USA"); // ###,###,...
+	$ny_partial = get_sandwiched_inner_text($text, "New York,", "USA"); // ###,###,...
 	// var_dump($partial); die();
 	
-	$ny_cases = getCommaPositionText($ny_partial, 5, $source); // 5th value on a csv line is cases
+	$ny_cases = getCommaPositionText($ny_partial, 5, $text, $source); // 5th value on a csv line is cases
 	return $ny_cases;
 }
 $todaysCumulativeCases = getTodaysCumulativeCases();
