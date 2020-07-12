@@ -399,9 +399,11 @@ function renderTable(query, dataSource) {
             lastDoubled = window.cumulativeCases;
             countingTillDoubled = 0;
         }
+        var date = moment(date).format("MM/DD/YY");
+        let dayOfWeek = moment(date).format("ddd");
         $tbody.prepend(`
             <tr>
-                <td data-unix="${unix}">${date}</td>
+                <td data-unix="${unix}">${date} ${dayOfWeek}</td>
                 <td>${cases}</td>
                 <td>${cumulativeCases} ${nowDoubled}</td>
                 ${TD_percentChange}

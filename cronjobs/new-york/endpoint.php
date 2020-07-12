@@ -13,6 +13,7 @@ if (!empty($argv[1])) {
 date_default_timezone_set("America/Los_Angeles");
 $todaysDate = date("m-d-Y", time()); // ##/##/####
 $source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/$todaysDate.csv";
+// $source = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/07-11-2020.csv";
 $dailyCumulativePath = "data/daily-cumulative.json";
 // echo $source; die();
 error_reporting(E_ALL ^ E_DEPRECATED);
@@ -48,7 +49,8 @@ function getCommaPositionText($partial, $pos, $full, $source) {
 function getTodaysCumulativeCases() {
 	global $source;
 	$ch = curl_init();
-	$timeout = 5;
+	// $timeout = 5;
+	$timeout = 0;
 	curl_setopt($ch, CURLOPT_URL, $source);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
