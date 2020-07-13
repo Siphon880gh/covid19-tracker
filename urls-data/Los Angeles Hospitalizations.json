@@ -1,0 +1,4 @@
+[
+    "http://publichealth.lacounty.gov/media/Coronavirus/data/",
+    "cronjobs/la-county-hospitals/endpoint.php?manual"
+]
