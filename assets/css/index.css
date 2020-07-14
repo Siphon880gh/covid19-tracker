@@ -131,3 +131,18 @@ td:nth-child(1) {
     text-align: left;
     padding-left: 5px !important;
 }
+
+/* Initial rows should not have doubling time or percent change because it could jump up a lot when setting the first cases with a high non-zero value */
+tbody tr:last-child td:last-child {
+    opacity: 0;
+}
+tbody tr:nth-last-child(2) td:last-child {
+    opacity: 0;
+}
+
+tbody tr:last-child .doubling-time {
+    display: none;
+}
+tbody tr:nth-last-child(2) .doubling-time {
+    display: none;
+}
