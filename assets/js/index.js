@@ -397,9 +397,14 @@ function renderTable(query, dataSource) {
     insertGraph($template.find(".js-graph"), selfData);
 
     // Insert any links
+    // let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
+    //     return anUrlList.area.indexOf(query)!==-1;
+    // });
+
     let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
-        return anUrlList.area.indexOf(query)!==-1;
+        return anUrlList.area === query;
     });
+
     // If need render urls
     if(typeof queryFirstUrls!=="undefined") {
         var $links = $template.find(".links");

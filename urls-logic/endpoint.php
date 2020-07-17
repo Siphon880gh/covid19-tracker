@@ -10,6 +10,7 @@ if(count($ls_filenames)) {
   for($i=0; $i<count($ls_filenames); $i++) {
     $filename = $ls_filenames[$i];
     $keyarea = $filename;
+    $keyarea = str_replace(".json", "", $keyarea);
     $str = file_get_contents($prefix_path . $filename);
     $overrides[$keyarea] = json_decode($str);
   } // for
