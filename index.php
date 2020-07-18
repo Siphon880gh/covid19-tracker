@@ -57,6 +57,8 @@
                         <div style="width: 100%; height: 100%">
                             <canvas class="js-graph"></canvas>
                             <div class="formula"></div>
+                            <div class="population-line"></div>
+                            <div class="population-density-line"></div>
                         </div>
                         <table class="js-table table-bordered table-striped">
                         </table>

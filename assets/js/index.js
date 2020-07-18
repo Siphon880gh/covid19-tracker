@@ -279,13 +279,13 @@ function reverseObject(object) {
 } // reverseObject
 // window.queryByCoords = [];
 
-function renderTable(query, dataSource) {
+function renderTable(query, dataSource, population, populationDensity) {
     console.log("*renderTable*: ", query, dataSource);
     // query can search area name or coordinates (coordinates have to be exact)
     let queryFirstEntry = dataSource.find((areaObject, i)=>{
         return areaObject.title.indexOf(query)!==-1;
     });
-    debugger;
+    // debugger;
 
     // dataSource.forEach((areaObject, i)=>{
     //     if(areaObject.title.indexOf(query)!==-1);
@@ -343,17 +343,27 @@ function renderTable(query, dataSource) {
         window.cumulativeCases = parseInt(cumulativeCases);
         window.cumulativeCases += cases;
 
-        function getPercentChange() {
-            return parseFloat( (cumulativeCases/prevCumulativeCases)*100 ).toFixed(2);
+        function getPercentChangeFloat() {
+            var pc = parseFloat( (cumulativeCases/prevCumulativeCases)*100 ).toFixed(2);
+            if(pc>=100) {
+                pc = `+${pc}`;
+            } else if(pc>=0) {
+                // pc = pc;
+            } else {
+                // pc = `- ${pc}`;
+            }
+            return pc;
         }
 
         let TD_percentChange = `<td style="background-color:lightgreen;">+ 0%</td>`; // default
         if(prevCumulativeCases>0 && prevCumulativeCases!==cumulativeCases) {
-            let percentChange = getPercentChange();
-            if(percentChange>=100) TD_percentChange = `<td class="percent-change" style="background-color:pink;">${percentChange}%</td>`;
-            else if(percentChange>=75) TD_percentChange = `<td class="percent-change" style="background-color:#FED8B1;">${percentChange}%</td>`;
-            else if(percentChange>=25) TD_percentChange = `<tdclass="percent-change" style="background-color:lightyellow;">${percentChange}%</td>`;
-            else TD_percentChange = `<td class="percent-change" style="background-color:lightgreen;">+ ${percentChange}%</td>`;
+            let percentChange = getPercentChangeFloat();
+            let bgColor = "";
+            if(percentChange>=100) bgColor = "pink";
+            else if(percentChange>=75) bgColor = "#FED8B1;";
+            else if(percentChange>=25) bgColor = "lightyellow";
+            else bgColor = "lightgreen";
+            TD_percentChange = `<td class="percent-change" style="background-color:${bgColor};">${percentChange}%</td>`;
         }
         window.prevCumulativeCases = cumulativeCases;
 
@@ -381,6 +391,7 @@ function renderTable(query, dataSource) {
         window.graphData.push({x:unix, y:cumulativeCases});
     });
 
+    // Best fit lines
     let $formula = $template.find(".formula");
     let y_cumulativeCases = graphData.map(xy=>xy.y);
     $.get("best-fit.php?y_points=" + y_cumulativeCases.join(","))
@@ -388,6 +399,27 @@ function renderTable(query, dataSource) {
         $formula.html(res);
         // debugger;
      });
+
+    // Population density
+    if(typeof population!=="undefined") { // arg provided in renderTable call
+        let $population = $template.find(".population-line");
+        let isHospital = $template.find(".title").text().indexOf("Hospital")>=0;
+        if(!isHospital)
+            helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population infected is the cumulative cases over the total population of ${query} (${parseInt(population)}). That tells you how many people have ever been infected in ${query}. But bear in mind this is an underestimation because less than 1% of population is actually tested because we do not have enough testing equipments.");'></i>`;
+        else
+            helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("This is the number of hospital beds (${population}) in the entire ${query} that are taken up with covid patients at the moment.");'></i>`;
+        if(!isHospital)
+            populationCalc = `Population infected (test capacity limited) ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(11) }%`;
+        else
+            populationCalc = `Hospital beds saturated with covid patients: ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(4) }%`;
+        $population.html(populationCalc);
+    }
+    if(typeof populationDensity!=="undefined") { // arg provided in renderTable call
+        let $populationDensity = $template.find(".population-density-line");
+        let helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population density infected is the population infected percentage multiplied by ${query} population density (${populationDensity}/mi²) which is the number of people in a square mile. Of course, this is when the crowdedness is redistributed to be spread out over the entire ${query}. Is a good number to compare against other cities.");'></i>`;
+        let populationDensityCalc = `Population density infected (test cpty limited) ${helpIcon} ${ ((window.cumulativeCases/population)*populationDensity).toFixed(2) }person/mi²`;
+        $populationDensity.html(populationDensityCalc);
+    }
 
     // Insert graph
     let selfData = [{
@@ -542,8 +574,8 @@ function combineGraphs($canva, arr$areas) {
 var sourcesRetrieving = setInterval(()=> {
     if(sourcesRetrieved===sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
-        renderTable("Los Angeles Hospitalizations", window.laCountyHospitals);
-        renderTable("Los Angeles", window.laCounty);
+        renderTable("Los Angeles Hospitalizations", window.laCountyHospitals, 19500);
+        renderTable("Los Angeles", window.laCounty, 10.04*100000000, 2489); // 8564
         renderTable("California", window.laTimesCalifornia);
         renderTable("New York", window.cnnNewYork);
         renderTable("US", window.johnHopkinsCountries);
