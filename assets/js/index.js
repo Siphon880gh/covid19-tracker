@@ -281,6 +281,8 @@ function reverseObject(object) {
 
 function renderTable(query, dataSource, population, populationDensity) {
     console.log("*renderTable*: ", query, dataSource);
+
+    let isHospital = query.indexOf("Hospital")>=0;
     // query can search area name or coordinates (coordinates have to be exact)
     let queryFirstEntry = dataSource.find((areaObject, i)=>{
         return areaObject.title.indexOf(query)!==-1;
@@ -322,8 +324,8 @@ function renderTable(query, dataSource, population, populationDensity) {
     let $table = $template.find(".js-table");
     $table.append(`<thead><tr>
                         <th>Date</th>
-                        <th>New<br/>Cases</th>
-                        <th>Cumulative<br/><small>Doubling<br/>Time</small></th>
+                        ${isHospital?"<th colspan='2'>Beds</th>":"<th>New<br/>Cases</th>"}
+                        ${isHospital?"":"<th>Cumulative<br/><small>Doubling<br/>Time</small></th>"}
                         <th>Change</th>
                     </tr></thead>`);
     $table.append("<tbody/>");
@@ -403,7 +405,6 @@ function renderTable(query, dataSource, population, populationDensity) {
     // Population density
     if(typeof population!=="undefined") { // arg provided in renderTable call
         let $population = $template.find(".population-line");
-        let isHospital = $template.find(".title").text().indexOf("Hospital")>=0;
         if(!isHospital)
             helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population infected is the cumulative cases over the total population of ${query} (${parseInt(population)}). That tells you how many people have ever been infected in ${query}. But bear in mind this is an underestimation because less than 1% of population is actually tested because we do not have enough testing equipments.");'></i>`;
         else
