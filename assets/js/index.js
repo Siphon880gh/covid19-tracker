@@ -18,12 +18,12 @@ $.ajaxSetup({
 /** Overrides 
  * 
  * Expect window.overrides; {area, dates}
-*/
+ */
 window.laCounty = []; // LA County Department of Public Health
 window.window.laTimesCalifornia = []; // LA Times reporting California levels, now replaced John Hopkins
 window.window.cnnNewYork = []; // CNN reporting state levels, now replaced John Hopkins for US states
 window.johnHopkinsStates = []; // John Hopkins University stopped reporting county levels on 3/10/20 however state levels still available.
-window.johnHopkinsCountries= []; // John Hopkins University stopped reporting state levels on 3/24/20 onwards. So we can only refer to US
+window.johnHopkinsCountries = []; // John Hopkins University stopped reporting state levels on 3/24/20 onwards. So we can only refer to US
 
 window.overrides = [];
 window.urlLists = [];
@@ -33,37 +33,38 @@ window.sourcesAllRetrieved = 8; // John Hopkins + LA Public Health for LA County
 
 // Csv text where first line are headers
 const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
-    const cutlast = (_, i, a) => i < a.length - 1;
-    // const regex = /(?:[\t ]?)+("+)?(.*?)\1(?:[\t ]?)+(?:,|$)/gm; // no variable chars
-    const regex = new RegExp(`(?:[\\t ]?)+(${quotechar}+)?(.*?)\\1(?:[\\t ]?)+(?:${delimiter}|$)`, 'gm');
-    const lines = str.split('\n');
-    let headers = headerList || lines.splice(0, 1)[0].match(regex).filter(cutlast);
-    headers = headers.map(header=>(header.length && header[header.length-1]===',')?header.substr(0, header.length-1):header);
-  
-    const list = [];
-  
-    for (const line of lines) {
-      const val = {};
-      for (const [i, m] of [...line.matchAll(regex)].filter(cutlast).entries()) {
-        // Attempt to convert to Number if possible, also use null if blank
-        val[headers[i]] = (m[2].length > 0) ? Number(m[2]) || m[2] : null;
-      }
-      list.push(val);
-    }
-  
-    return list;
-} // csvToJson
+        const cutlast = (_, i, a) => i < a.length - 1;
+        // const regex = /(?:[\t ]?)+("+)?(.*?)\1(?:[\t ]?)+(?:,|$)/gm; // no variable chars
+        const regex = new RegExp(`(?:[\\t ]?)+(${quotechar}+)?(.*?)\\1(?:[\\t ]?)+(?:${delimiter}|$)`, 'gm');
+        const lines = str.split('\n');
+        let headers = headerList || lines.splice(0, 1)[0].match(regex).filter(cutlast);
+        headers = headers.map(header => (header.length && header[header.length - 1] === ',') ? header.substr(0, header.length - 1) : header);
+
+        const list = [];
+
+        for (const line of lines) {
+            const val = {};
+            for (const [i, m] of[...line.matchAll(regex)].filter(cutlast).entries()) {
+                // Attempt to convert to Number if possible, also use null if blank
+                val[headers[i]] = (m[2].length > 0) ? Number(m[2]) || m[2] : null;
+            }
+            list.push(val);
+        }
+
+        return list;
+    } // csvToJson
 
 (async function setOverrides() {
-    var response = await fetch("override-dates-logic/endpoint.php", {cache: "reload"}, dat=>dat);
+    var response = await fetch("override-dates-logic/endpoint.php", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
-    var arr = [], arr2 = [];
-    if(dump.length) arr = JSON.parse(dump, true);
+    var arr = [],
+        arr2 = [];
+    if (dump.length) arr = JSON.parse(dump, true);
 
-    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
+    Object.keys(arr).forEach(function(filename, index) { // {filename: {dates...}} => conformedObject { area, dates {} }
         var area = "";
         area = filename.replace(".json", "");
-        arr2.push({area:area, dates:arr[filename]});
+        arr2.push({ area: area, dates: arr[filename] });
     });
     window.overrides = arr2;
     console.log("overrides [ { area, dates {} }, ... ]", window.overrides);
@@ -72,15 +73,16 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setUrls() {
-    var response = await fetch("urls-logic/endpoint.php", {cache: "reload"}, dat=>dat);
+    var response = await fetch("urls-logic/endpoint.php", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
-    var arr = [], arr2 = [];
-    if(dump.length) arr = JSON.parse(dump, true);
+    var arr = [],
+        arr2 = [];
+    if (dump.length) arr = JSON.parse(dump, true);
 
-    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
+    Object.keys(arr).forEach(function(filename, index) { // {filename: {dates...}} => conformedObject { area, dates {} }
         var area = "";
         area = filename.replace(".json", "");
-        arr2.push({area:area, urls:arr[filename]});
+        arr2.push({ area: area, urls: arr[filename] });
     });
     window.urlLists = arr2;
     console.log("urls [ { area, urls [] }, ... ]", window.urlLists);
@@ -88,15 +90,16 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 })(); // setOverrides
 
 (async function setNotes() {
-    var response = await fetch("notes-logic/endpoint.php", {cache: "reload"}, dat=>dat);
+    var response = await fetch("notes-logic/endpoint.php", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
-    var arr = [], arr2 = [];
-    if(dump.length) arr = JSON.parse(dump, true);
+    var arr = [],
+        arr2 = [];
+    if (dump.length) arr = JSON.parse(dump, true);
 
-    Object.keys(arr).forEach(function(filename,index) { // {filename: {dates...}} => conformedObject { area, dates {} }
+    Object.keys(arr).forEach(function(filename, index) { // {filename: {dates...}} => conformedObject { area, dates {} }
         var area = "";
         area = filename.replace(".json", "");
-        arr2.push({area:area, note:arr[filename]});
+        arr2.push({ area: area, note: arr[filename] });
     });
     window.notes = arr2;
     console.log("notes [ { area, note }, ... ]", window.notes);
@@ -105,44 +108,40 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaCountyHospitalized() {
-    var response = await fetch("cronjobs/la-county-hospitals/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
+    var response = await fetch("cronjobs/la-county-hospitals/data/daily-cumulative.json", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
-    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    if (dump.length) arr = JSON.parse(dump, true); // {dates...}
     arr = reverseObject(arr);
     arr = convertCumulativeCasesToBreakdownCases(arr);
-     
+
     // {dates...} => conformedObject { area, title, dates {} }
-    window.laCountyHospitals = [
-        {
-            area: "Los Angeles Hospitalizations",
-            title: "Los Angeles Hospitalizations",
-            dates: arr
-        }
-    ];
-    
+    window.laCountyHospitals = [{
+        area: "L.A. County Covid Hospitalizations",
+        title: "L.A. County Covid Hospitalizations",
+        dates: arr
+    }];
+
     console.log("area, title, dates []]", window.laCountyHospitals);
     // debugger;
     window.sourcesRetrieved++;
 })(); // setLaCountyHospitalized
 
 (async function setLaCounty() {
-    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
+    var response = await fetch("cronjobs/la-county/data/daily-cumulative.json", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
-    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    if (dump.length) arr = JSON.parse(dump, true); // {dates...}
     arr = reverseObject(arr);
     arr = convertCumulativeCasesToBreakdownCases(arr);
-     
+
     // {dates...} => conformedObject { area, title, dates {} }
-    window.laCounty = [
-        {
-            area: "Los Angeles",
-            title: "Los Angeles",
-            dates: arr
-        }
-    ];
-    
+    window.laCounty = [{
+        area: "Los Angeles",
+        title: "Los Angeles",
+        dates: arr
+    }];
+
     console.log("area, title, dates []]", window.laCounty);
     // debugger;
     window.sourcesRetrieved++;
@@ -150,22 +149,20 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setCnnNewYork() {
-    var response = await fetch("cronjobs/new-york/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
+    var response = await fetch("cronjobs/new-york/data/daily-cumulative.json", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
-    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    if (dump.length) arr = JSON.parse(dump, true); // {dates...}
     arr = reverseObject(arr);
     arr = convertCumulativeCasesToBreakdownCases(arr);
-     
+
     // {dates...} => conformedObject { area, title, dates {} }
-    window.cnnNewYork = [
-        {
-            area: "New York",
-            title: "New York",
-            dates: arr
-        }
-    ];
-    
+    window.cnnNewYork = [{
+        area: "New York",
+        title: "New York",
+        dates: arr
+    }];
+
     console.log("area, title, dates []]", window.cnnNewYork);
     // debugger;
     window.sourcesRetrieved++;
@@ -173,57 +170,55 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
 
 (async function setLaTimesCalifornia() {
-    var response = await fetch("cronjobs/california/data/daily-cumulative.json", {cache: "reload"}, dat=>dat);
+    var response = await fetch("cronjobs/california/data/daily-cumulative.json", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
-    if(dump.length) arr = JSON.parse(dump, true); // {dates...}
+    if (dump.length) arr = JSON.parse(dump, true); // {dates...}
     arr = reverseObject(arr);
     arr = convertCumulativeCasesToBreakdownCases(arr);
-     
+
     // {dates...} => conformedObject { area, title, dates {} }
-    window.laTimesCalifornia = [
-        {
-            area: "California",
-            title: "California",
-            dates: arr
-        }
-    ];
-    
+    window.laTimesCalifornia = [{
+        area: "California",
+        title: "California",
+        dates: arr
+    }];
+
     console.log("area, title, dates []]", window.laCounty);
     // debugger;
     window.sourcesRetrieved++;
 })(); // setLaTimesCalifornia
 
 (async function setjohnHopkinsCountries() { // // reports daily cumulative cases
-    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", {cache: "reload"}, dat=>dat);
+    var response = await fetch("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", { cache: "reload" }, dat => dat);
     var dump = await response.text(); // don't use .json() because can't assure it won't be empty
     var arr = [];
-    if(dump.length>0) arr = csvToJson(dump);
+    if (dump.length > 0) arr = csvToJson(dump);
 
     // Conform Object
     arr.forEach((areaObject, i) => { // {province/state,country/region,lat,long,dates...} => conformedObject { area, title, dates {} }
         var conformedObject = {
-                                area:"",
-                                title:"",
-                                dates: {}
-                              };
+            area: "",
+            title: "",
+            dates: {}
+        };
 
-        var sp = (typeof areaObject["Province/State"]!=="undefined" && areaObject["Province/State"]!==null)?areaObject["Province/State"]:"", 
-            cr = (typeof areaObject["Country/Region"]!=="undefined" && areaObject["Country/Region"]!==null)?areaObject["Country/Region"]:"", 
-            lat = (typeof areaObject["Lat"]!=="undefined" && areaObject["Lat"]!==null)?areaObject["Lat"]:"", 
-            long = (typeof areaObject["Long"]!=="undefined" && areaObject["Long"]!==null)?areaObject["Long"]:"";
+        var sp = (typeof areaObject["Province/State"] !== "undefined" && areaObject["Province/State"] !== null) ? areaObject["Province/State"] : "",
+            cr = (typeof areaObject["Country/Region"] !== "undefined" && areaObject["Country/Region"] !== null) ? areaObject["Country/Region"] : "",
+            lat = (typeof areaObject["Lat"] !== "undefined" && areaObject["Lat"] !== null) ? areaObject["Lat"] : "",
+            long = (typeof areaObject["Long"] !== "undefined" && areaObject["Long"] !== null) ? areaObject["Long"] : "";
 
         // Coerce types
-        if(typeof sp==="undefined" || sp === null) sp = "";
-        if(typeof cr==="undefined" || cr === null) cr = "";
+        if (typeof sp === "undefined" || sp === null) sp = "";
+        if (typeof cr === "undefined" || cr === null) cr = "";
         lat = lat + "";
         long = long + "";
 
         // Coerce max length for long/lat
-        if(lat.toString().length>8) lat = lat.toString().substr(0,8);
-        if(long.toString().length>8) long = long.toString().substr(0,8);
+        if (lat.toString().length > 8) lat = lat.toString().substr(0, 8);
+        if (long.toString().length > 8) long = long.toString().substr(0, 8);
 
-        var name = (sp.length?sp+", ":"") + cr;
+        var name = (sp.length ? sp + ", " : "") + cr;
         var coords = ` <a target="_blank" href="https://www.google.com/maps/@${lat},${long},8z">(${lat}, ${long})</a>`;
         conformedObject.area = name;
         conformedObject.title = name + coords;
@@ -234,8 +229,8 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
         delete areaObject["Country/Region"];
         delete areaObject["Lat"];
         delete areaObject["Long"];
-        if(typeof areaObject[""]!=="undefined") delete areaObject[""]; // glitchy csv
-        if(typeof areaObject[","]!=="undefined") delete areaObject[","]; // glitchy csv
+        if (typeof areaObject[""] !== "undefined") delete areaObject[""]; // glitchy csv
+        if (typeof areaObject[","] !== "undefined") delete areaObject[","]; // glitchy csv
         areaObject = convertCumulativeCasesToBreakdownCases(areaObject);
         conformedObject.dates = areaObject;
         // console.log("dates", conformedObject.dates);
@@ -255,7 +250,7 @@ function convertCumulativeCasesToBreakdownCases(areaObject) { // areaObject with
     Object.keys(areaObject).forEach(function(date, index) {
         let cumulativeCases = parseInt(areaObject[date]);
         areaObject[date] = cumulativeCases - prevCumulativeCases;
-        if(areaObject[date]===0) delete areaObject[date];
+        if (areaObject[date] === 0) delete areaObject[date];
         prevCumulativeCases = cumulativeCases;
     });
     return areaObject;
@@ -271,9 +266,9 @@ function reverseObject(object) {
     }
 
     for (var i = keys.length - 1; i >= 0; i--) {
-      var value = object[keys[i]];
-      newObject[keys[i]]= value;
-    }       
+        var value = object[keys[i]];
+        newObject[keys[i]] = value;
+    }
 
     return newObject;
 } // reverseObject
@@ -282,10 +277,10 @@ function reverseObject(object) {
 function renderTable(query, dataSource, population, populationDensity) {
     console.log("*renderTable*: ", query, dataSource);
 
-    let isHospital = query.indexOf("Hospital")>=0;
+    let isHospital = query.indexOf("Hospital") >= 0;
     // query can search area name or coordinates (coordinates have to be exact)
-    let queryFirstEntry = dataSource.find((areaObject, i)=>{
-        return areaObject.title.indexOf(query)!==-1;
+    let queryFirstEntry = dataSource.find((areaObject, i) => {
+        return areaObject.title.indexOf(query) !== -1;
     });
     // debugger;
 
@@ -295,16 +290,16 @@ function renderTable(query, dataSource, population, populationDensity) {
     // });
 
     // If the area is not found in the data source
-    if(typeof queryFirstEntry==="undefined") {
+    if (typeof queryFirstEntry === "undefined") {
         return;
     }
 
-    let queryFirstOverride = window.overrides.find((anOveride, i)=>{
-        return anOveride.area.indexOf(query)!==-1;
+    let queryFirstOverride = window.overrides.find((anOveride, i) => {
+        return anOveride.area.indexOf(query) !== -1;
     });
     // If need to override
-    if(typeof queryFirstOverride!=="undefined") {
-        var originalDateCases =  queryFirstEntry.dates;
+    if (typeof queryFirstOverride !== "undefined") {
+        var originalDateCases = queryFirstEntry.dates;
         var overridingDateCases = reverseObject(queryFirstOverride.dates);
 
         for (var date in overridingDateCases) { // prop in obj
@@ -332,7 +327,7 @@ function renderTable(query, dataSource, population, populationDensity) {
 
     window.cumulativeCases = 0;
     window.prevCumulativeCases = 0;
-    window.graphData  = []; // of {x:int, y:int}
+    window.graphData = []; // of {x:int, y:int}
     let dateCasesKvp = queryFirstEntry.dates; // date-cases key-value pairs {m/d/yy: number cases]}
     let $tbody = $template.find("tbody");
 
@@ -341,15 +336,15 @@ function renderTable(query, dataSource, population, populationDensity) {
     let firstDoubledEver = true;
     Object.keys(dateCasesKvp).forEach(function(date, i) {
         let cases = parseInt(dateCasesKvp[date]);
-        let unix = moment(date, "MM/DD/YYYY").valueOf()/1000;
+        let unix = moment(date, "MM/DD/YYYY").valueOf() / 1000;
         window.cumulativeCases = parseInt(cumulativeCases);
         window.cumulativeCases += cases;
 
         function getPercentChangeFloat() {
-            var pc = parseFloat( (cumulativeCases/prevCumulativeCases)*100 ).toFixed(2);
-            if(pc>=100) {
+            var pc = parseFloat((cumulativeCases / prevCumulativeCases) * 100).toFixed(2);
+            if (pc >= 100) {
                 pc = `+${pc}`;
-            } else if(pc>=0) {
+            } else if (pc >= 0) {
                 // pc = pc;
             } else {
                 // pc = `- ${pc}`;
@@ -358,12 +353,12 @@ function renderTable(query, dataSource, population, populationDensity) {
         }
 
         let TD_percentChange = `<td style="background-color:lightgreen;">+ 0%</td>`; // default
-        if(prevCumulativeCases>0 && prevCumulativeCases!==cumulativeCases) {
+        if (prevCumulativeCases > 0 && prevCumulativeCases !== cumulativeCases) {
             let percentChange = getPercentChangeFloat();
             let bgColor = "";
-            if(percentChange>=100) bgColor = "pink";
-            else if(percentChange>=75) bgColor = "#FED8B1;";
-            else if(percentChange>=25) bgColor = "lightyellow";
+            if (percentChange >= 100) bgColor = "pink";
+            else if (percentChange >= 75) bgColor = "#FED8B1;";
+            else if (percentChange >= 25) bgColor = "lightyellow";
             else bgColor = "lightgreen";
             TD_percentChange = `<td class="percent-change" style="background-color:${bgColor};">${percentChange}%</td>`;
         }
@@ -371,8 +366,11 @@ function renderTable(query, dataSource, population, populationDensity) {
 
         countingTillDoubled++;
         let nowDoubled = "";
-        if(window.cumulativeCases>=lastDoubled*2) {
-            if(firstDoubledEver) { firstDoubledEver=false; countingTillDoubled=1; } // case first doubled for the table
+        if (window.cumulativeCases >= lastDoubled * 2) {
+            if (firstDoubledEver) {
+                firstDoubledEver = false;
+                countingTillDoubled = 1;
+            } // case first doubled for the table
             nowDoubled = `<br/><span class="clickable" style="color:red" onclick="$(this).children().toggleClass('hidden');">
                             <span class="doubling-time">${countingTillDoubled}</span>
                             <span class="predict-doubling-time hidden">${window.cumulativeCases*2}</span>
@@ -390,32 +388,32 @@ function renderTable(query, dataSource, population, populationDensity) {
                 ${TD_percentChange}
             </tr>
         `);
-        window.graphData.push({x:unix, y:cumulativeCases});
+        window.graphData.push({ x: unix, y: cumulativeCases });
     });
 
     // Best fit lines
     let $formula = $template.find(".formula");
-    let y_cumulativeCases = graphData.map(xy=>xy.y);
+    let y_cumulativeCases = graphData.map(xy => xy.y);
     $.get("best-fit.php?y_points=" + y_cumulativeCases.join(","))
-    .done(res=>{ 
-        $formula.html(res);
-        // debugger;
-     });
+        .done(res => {
+            $formula.html(res);
+            // debugger;
+        });
 
     // Population density
-    if(typeof population!=="undefined") { // arg provided in renderTable call
+    if (typeof population !== "undefined") { // arg provided in renderTable call
         let $population = $template.find(".population-line");
-        if(!isHospital)
+        if (!isHospital)
             helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population infected is the cumulative cases over the total population of ${query} (${parseInt(population)}). That tells you how many people have ever been infected in ${query}. But bear in mind this is an underestimation because less than 1% of population is actually tested because we do not have enough testing equipments.");'></i>`;
         else
             helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("This is the number of hospital beds (${population}) in the entire ${query} that are taken up with covid patients at the moment.");'></i>`;
-        if(!isHospital)
+        if (!isHospital)
             populationCalc = `Population infected (test capacity limited) ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(11) }%`;
         else
             populationCalc = `Hospital beds saturated with covid patients: ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(4) }%`;
         $population.html(populationCalc);
     }
-    if(typeof populationDensity!=="undefined") { // arg provided in renderTable call
+    if (typeof populationDensity !== "undefined") { // arg provided in renderTable call
         let $populationDensity = $template.find(".population-density-line");
         let helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population density infected is the population infected percentage multiplied by ${query} population density (${populationDensity}/mi²) which is the number of people in a square mile. Of course, this is when the crowdedness is redistributed to be spread out over the entire ${query}. Is a good number to compare against other cities.");'></i>`;
         let populationDensityCalc = `Population density infected (test cpty limited) ${helpIcon} ${ ((window.cumulativeCases/population)*populationDensity).toFixed(2) }person/mi²`;
@@ -434,27 +432,27 @@ function renderTable(query, dataSource, population, populationDensity) {
     //     return anUrlList.area.indexOf(query)!==-1;
     // });
 
-    let queryFirstUrls = window.urlLists.find((anUrlList, i)=>{
+    let queryFirstUrls = window.urlLists.find((anUrlList, i) => {
         return anUrlList.area === query;
     });
 
     // If need render urls
-    if(typeof queryFirstUrls!=="undefined") {
+    if (typeof queryFirstUrls !== "undefined") {
         var $links = $template.find(".links");
 
-        queryFirstUrls.urls.forEach(url=>{
+        queryFirstUrls.urls.forEach(url => {
             $links.append($(`<i class='fas fa-link clickable' onclick="window.open('${url}');"/>`));
         });
     } // queryFirstUrls
 
     // Insert any notes
-    let queryFirstNote = window.notes.find((aNote, i)=>{
-        return aNote.area.indexOf(query)!==-1;
+    let queryFirstNote = window.notes.find((aNote, i) => {
+        return aNote.area.indexOf(query) !== -1;
     });
-    if(typeof queryFirstNote!=="undefined") {
+    if (typeof queryFirstNote !== "undefined") {
         let $note = $template.find(".note");
         let note = queryFirstNote.note;
-        $note.html(`<i class="fa fa-sticky-note">`).attr({"title":note,"data-placement":"bottom","data-html":"true"}).tooltip();
+        $note.html(`<i class="fa fa-sticky-note">`).attr({ "title": note, "data-placement": "bottom", "data-html": "true" }).tooltip();
     } // queryFirstNotes
 
     $("#areas").append($template);
@@ -470,70 +468,70 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
         options: {
             tooltips: {
                 callbacks: {
-                title(datasets) {
-                var time = new Date(datasets[0].xLabel * 1000);
-                    return (time.getMonth() + 1) + '/' + time.getDate()
+                    title(datasets) {
+                        var time = new Date(datasets[0].xLabel * 1000);
+                        return (time.getMonth() + 1) + '/' + time.getDate()
+                    }
                 }
-            }
             },
             scales: {
-                xAxes: [
-                {
+                xAxes: [{
                     type: 'linear',
                     position: 'bottom',
                     ticks: {
-                    callback(value) {
-                        var time = new Date(value * 1000);
-                        return (time.getMonth() + 1) + '/' + time.getDate();
+                        callback(value) {
+                            var time = new Date(value * 1000);
+                            return (time.getMonth() + 1) + '/' + time.getDate();
+                        }
                     }
-                    }
-                }
-                ]
+                }]
             }
         }
     });
 } // insertGraph
 
 function getRandomRgb() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    var o = Math.round,
+        r = Math.random,
+        s = 255;
+    return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
 }
 
 
 function zoomGraphs($canva, arr$areas) {
     let graphs = [];
 
-    arr$areas.forEach(($area, i) => { 
+    arr$areas.forEach(($area, i) => {
         let $cumulativeCases = $area.find("td:nth-child(3)"); // [$td,...]
-        let cumulativeCases = $cumulativeCases.toArray().map((td)=>parseInt($(td).text())); // [int,...]
+        let cumulativeCases = $cumulativeCases.toArray().map((td) => parseInt($(td).text())); // [int,...]
         let $unixs = $area.find("td:nth-child(1)"); // [$td,...]
-        let unixs = $unixs.toArray().map((td)=>parseInt($(td).attr("data-unix"))); // [int,...]
+        let unixs = $unixs.toArray().map((td) => parseInt($(td).attr("data-unix"))); // [int,...]
 
         // Only show last 14 days so the graph is easier to eye
         cumulativeCases.splice(-14);
         unixs.splice(-14);
 
         window.graphData = [];
-        unixs.forEach( (unix, i) => {
-            let graphCoordinate = {x:0, y:0};
+        unixs.forEach((unix, i) => {
+            let graphCoordinate = { x: 0, y: 0 };
             graphCoordinate.x = unix;
             graphCoordinate.y = cumulativeCases[i];
             window.graphData.push(graphCoordinate);
         });
 
-        let areaName = $area.find(".title").attr("data-area"); 
+        let areaName = $area.find(".title").attr("data-area");
         let randomColor = getRandomRgb();
-        
+
         let graph = {
             label: areaName,
             data: window.graphData,
             pointBorderColor: randomColor,
             borderColor: randomColor
-         }
-         graphs.push(graph);
-     });
+        }
+        graphs.push(graph);
+    });
 
-     let selfData = [];
+    let selfData = [];
 
     insertGraph($canva, graphs);
 }
@@ -541,42 +539,42 @@ function zoomGraphs($canva, arr$areas) {
 function combineGraphs($canva, arr$areas) {
     let graphs = [];
 
-    arr$areas.forEach(($area, i) => { 
+    arr$areas.forEach(($area, i) => {
         let $cumulativeCases = $area.find("td:nth-child(3)"); // [$td,...]
-        let cumulativeCases = $cumulativeCases.toArray().map((td)=>parseInt($(td).text())); // [int,...]
+        let cumulativeCases = $cumulativeCases.toArray().map((td) => parseInt($(td).text())); // [int,...]
         let $unixs = $area.find("td:nth-child(1)"); // [$td,...]
-        let unixs = $unixs.toArray().map((td)=>parseInt($(td).attr("data-unix"))); // [int,...]
+        let unixs = $unixs.toArray().map((td) => parseInt($(td).attr("data-unix"))); // [int,...]
 
         window.graphData = [];
-        unixs.forEach( (unix, i) => {
-            let graphCoordinate = {x:0, y:0};
+        unixs.forEach((unix, i) => {
+            let graphCoordinate = { x: 0, y: 0 };
             graphCoordinate.x = unix;
             graphCoordinate.y = cumulativeCases[i];
             window.graphData.push(graphCoordinate);
         });
 
-        let areaName = $area.find(".title").attr("data-area"); 
+        let areaName = $area.find(".title").attr("data-area");
         let randomColor = getRandomRgb();
-        
+
         let graph = {
             label: areaName,
             data: window.graphData,
             pointBorderColor: randomColor,
             borderColor: randomColor
-         }
-         graphs.push(graph);
-     });
+        }
+        graphs.push(graph);
+    });
 
-     let selfData = [];
+    let selfData = [];
 
     insertGraph($canva, graphs);
 }
 
-var sourcesRetrieving = setInterval(()=> {
-    if(sourcesRetrieved===sourcesAllRetrieved) {
+var sourcesRetrieving = setInterval(() => {
+    if (sourcesRetrieved === sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
-        renderTable("Los Angeles Hospitalizations", window.laCountyHospitals, 19500);
-        renderTable("Los Angeles", window.laCounty, 10.04*100000000, 2489); // 8564
+        renderTable("L.A. County Covid Hospitalizations", window.laCountyHospitals, 19500);
+        renderTable("Los Angeles", window.laCounty, 10.04 * 100000000, 2489); // 8564
         renderTable("California", window.laTimesCalifornia);
         renderTable("New York", window.cnnNewYork);
         renderTable("US", window.johnHopkinsCountries);
@@ -590,9 +588,9 @@ var sourcesRetrieving = setInterval(()=> {
         // $(".area").height(maxHeight);
 
         // More graphs' dropdown's onchange
-        $("#more-graphs").on("change", ev=>{
+        $("#more-graphs").on("change", ev => {
             let value = ev.target.value;
-            if(value.length===0) return false;
+            if (value.length === 0) return false;
             let modal = value; // "#modal-combined-graphs-1"
             $(modal).modal("show");
             $("#more-graphs").val("");
@@ -605,14 +603,14 @@ var sourcesRetrieving = setInterval(()=> {
         zoomGraphs($("#modal-zoomed-graphs-0 canvas"), arr$areas0);
         $("#more-graphs").append(`<option value="#modal-zoomed-graphs-0">Zoomed Los Angeles</option>`);
 
-        const arr$areas1= [
-                            $(".area:has(.title[data-area='US'])"), 
-                            $(".area:has(.title[data-area='Los Angeles'])"),
-                            $(".area:has(.title[data-area='California'])"),
-                            $(".area:has(.title[data-area='New York'])"),
-                            $(".area:has(.title[data-area='Japan'])"),
-                            $(".area:has(.title[data-area='Italy'])"),
-                        ]
+        const arr$areas1 = [
+            $(".area:has(.title[data-area='US'])"),
+            $(".area:has(.title[data-area='Los Angeles'])"),
+            $(".area:has(.title[data-area='California'])"),
+            $(".area:has(.title[data-area='New York'])"),
+            $(".area:has(.title[data-area='Japan'])"),
+            $(".area:has(.title[data-area='Italy'])"),
+        ]
         combineGraphs($("#modal-combined-graphs-1 canvas"), arr$areas1);
         $("#more-graphs").append(`<option value="#modal-combined-graphs-1">Interested Cities</option>`);
 
