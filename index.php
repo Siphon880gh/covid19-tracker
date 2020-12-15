@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
+    <!-- Icons -->
+    <link rel="icon" href="assets/icons/Icons8-Ios7-Healthcare-Virus.ico">
+
     <style><?php include("assets/css/index.css"); ?></style>
 
 </head>
