@@ -478,6 +478,7 @@ function renderTable(query, dataSource, population, populationDensity) {
 
 function insertGraph($parent, datum) { // $DOM to insert, array of data
     var ctx = $parent[0].getContext("2d");
+    // debugger;
     var scatterChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -497,7 +498,10 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                     type: 'linear',
                     position: 'bottom',
                     ticks: {
+                        maxTicksLimit: datum[0].data.length - 1,
+                        stepSize: 3000000,
                         callback(value) {
+                            if (isNaN(value)) return 0;
                             var time = new Date(value * 1000);
                             return (time.getMonth() + 1) + '/' + time.getDate();
                         }
