@@ -24,7 +24,7 @@
 ?>
 <html lang="en">
   <head>
-   <title>Covid-19 / Coronavirus Growth Tracker</title>
+   <title>Daily Covid-19 Tracking</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -41,12 +41,14 @@
 </head>
     <body>
         <div class="container-alt">
-            <div id="title">Covid-19 Growth <i class="fas fa-first-aid"></i></div>
+            <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
+            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.</div>
             <div id="credits">
                 <span class="authored">By Weng Fei Fung</span>
-                <span class="source"><a href="javascript:void()" onclick="$(this).next().toggle();">Data collection notes.</a><span style="display:none;"> Los Angeles reflects all of Los Angeles county including Hollywood, Lincoln Heights, Long Beach, Monterey Park, Pasadena, etc. 7/3/20-7/5/20 do not have reported numbers from LA County because their reporting system was down to improve it. Other Los Angeles notes: Monday/Tuesday numbers tend to spike up as weekend results catch up. Notes on New York: The stats can come in as late as 1AM EST next day. General Notes: Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></span>
             </div>
-            <div id="desc" style="margin-top:20px;">Quick tabular and graph snapshots of the Covid growth in hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>. And <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=wff1012%40hotmail.com&currency_code=USD">help me buy a cup of coffee at paypal - thank you</a>. Want to <a target="_blank" href="https://www.linkedin.com/in/weng-fung/">hire me</a> for web development / programming?</div>
+            <div class="self-promo" style="font-size:1.3rem;">
+                <span><a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=wff1012%40hotmail.com&currency_code=USD"><i class="fab fa-paypal"></i> Help me buy a cup of coffee - thank you</a>. </br><a target="_blank" href="https://www.linkedin.com/in/weng-fung/"><i class="fab fa-linkedin"></i> Available for hire for web development / software engineering - thank you.</a></span>
+            </div>
             
             <br/>
 
@@ -203,6 +205,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
     
     <script><?php include("assets/js/index.js"); ?></script>
+
+    <span class="source" style="margin-top:10px;"><a href="javascript:void()" onclick="$(this).next().toggle();">Data collection notes.</a><span style="display:none;"> Los Angeles reflects all of Los Angeles county including Hollywood, Lincoln Heights, Long Beach, Monterey Park, Pasadena, etc. 7/3/20-7/5/20 do not have reported numbers from LA County because their reporting system was down to improve it. Other Los Angeles notes: Monday/Tuesday numbers tend to spike up as weekend results catch up. Notes on New York: The stats can come in as late as 1AM EST next day. General Notes: Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></span>
 
     </body>
 </html>
