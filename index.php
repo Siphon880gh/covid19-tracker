@@ -35,7 +35,8 @@
     <!-- Icons -->
     <link rel="icon" href="assets/icons/Icons8-Ios7-Healthcare-Virus.ico">
 
-    <style><?php include("assets/css/index.css"); ?></style>
+    <!-- Site Assets -->
+    <link rel="stylesheet" href="assets/css/index.css">
 
 </head>
     <body>
