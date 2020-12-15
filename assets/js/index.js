@@ -277,7 +277,7 @@ function reverseObject(object) {
 function renderTable(query, dataSource, population, populationDensity) {
     console.log("*renderTable*: ", query, dataSource);
 
-    let isHospital = query.indexOf("Hospital") >= 0;
+    let isHospitalBeds = query.indexOf("Hospital") >= 0;
     // query can search area name or coordinates (coordinates have to be exact)
     let queryFirstEntry = dataSource.find((areaObject, i) => {
         return areaObject.title.indexOf(query) !== -1;
@@ -317,12 +317,30 @@ function renderTable(query, dataSource, population, populationDensity) {
     $title.attr("data-area", queryFirstEntry.area); // You'll need the title without coords for combined graphs' area labels
 
     let $table = $template.find(".js-table");
-    $table.append(`<thead><tr>
-                        <th>Date</th>
-                        ${isHospital?"<th colspan='2'>Beds</th>":"<th>New<br/>Cases</th>"}
-                        ${isHospital?"":"<th>Cumulative<br/><small>Doubling<br/>Time</small></th>"}
-                        <th>Change</th>
-                    </tr></thead>`);
+    if (isHospitalBeds) {
+        $table.append(`<thead>
+                            <tr>
+                                <th>Date</th>
+                                <th colspan='2'>Beds</th>
+                                <th>% Change</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Change</th>
+                                <th>Cumulative</th>
+                                <th></th>
+                            </tr>
+                        </thead>`);
+    } else {
+        $table.append(`<thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>New<br/>Cases</th>"}
+                                <th>Cumulative<br/><small>Doubling<br/>Time</small></th>"}
+                                <th>% Change</th>
+                            </tr>
+                        </thead>`);
+    }
     $table.append("<tbody/>");
 
     window.cumulativeCases = 0;
@@ -403,11 +421,11 @@ function renderTable(query, dataSource, population, populationDensity) {
     // Population density
     if (typeof population !== "undefined") { // arg provided in renderTable call
         let $population = $template.find(".population-line");
-        if (!isHospital)
+        if (!isHospitalBeds)
             helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("Population infected is the cumulative cases over the total population of ${query} (${parseInt(population)}). That tells you how many people have ever been infected in ${query}. But bear in mind this is an underestimation because less than 1% of population is actually tested because we do not have enough testing equipments.");'></i>`;
         else
             helpIcon = `<i class="fa fa-question clickable" style="font-size:1rem; vertical-align:top;" onclick='alert("This is the number of hospital beds (${population}) in the entire ${query} that are taken up with covid patients at the moment.");'></i>`;
-        if (!isHospital)
+        if (!isHospitalBeds)
             populationCalc = `Population infected (test capacity limited) ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(11) }%`;
         else
             populationCalc = `Hospital beds saturated with covid patients: ${helpIcon} ${ ((window.cumulativeCases/population)*100).toFixed(4) }%`;

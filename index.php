@@ -56,9 +56,14 @@
                         <div class="title" data-area=""></div>
                         <div style="width: 100%; height: 100%">
                             <canvas class="js-graph"></canvas>
-                            <div class="formula"></div>
-                            <div class="population-line"></div>
-                            <div class="population-density-line"></div>
+                            <div class="math">
+                                <a onclick="event.preventDefault(); $(this).hide(); $(this).next().removeClass('hide');" href="#" style="float:right; margin:5px;">Show Prediction Model</a>
+                                <div class="inner hide">
+                                    <div class="formula"></div>
+                                    <div class="population-line"></div>
+                                    <div class="population-density-line"></div>
+                                </div>
+                            </div>
                         </div>
                         <table class="js-table table-bordered table-striped">
                         </table>
