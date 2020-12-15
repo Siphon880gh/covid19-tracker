@@ -327,7 +327,7 @@ function renderTable(query, dataSource, population, populationDensity) {
                             <tr>
                                 <th></th>
                                 <th>Change</th>
-                                <th>Cumulative</th>
+                                <th>Total (Real-Time)</th>
                                 <th></th>
                             </tr>
                         </thead>`);
@@ -336,7 +336,7 @@ function renderTable(query, dataSource, population, populationDensity) {
                             <tr>
                                 <th>Date</th>
                                 <th>Cases</th>"}
-                                <th>Cumulative</th>"}
+                                <th>Cumulative (Ever)</th>"}
                                 <th>% Change</th>
                             </tr>
                         </thead>`);
