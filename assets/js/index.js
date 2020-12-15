@@ -117,8 +117,8 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
     // {dates...} => conformedObject { area, title, dates {} }
     window.laCountyHospitals = [{
-        area: "L.A. County Covid Hospitalizations",
-        title: "L.A. County Covid Hospitalizations",
+        area: "Los Angeles Covid Hospitalizations", // must match name passed by renderTable
+        title: "Los Angeles Covid Hospitalizations", // Render title top of graph
         dates: arr
     }];
 
@@ -137,8 +137,8 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
 
     // {dates...} => conformedObject { area, title, dates {} }
     window.laCounty = [{
-        area: "Los Angeles",
-        title: "Los Angeles",
+        area: "Los Angeles", // must match name passed by renderTable
+        title: "Los Angeles Population", // Render title top of graph
         dates: arr
     }];
 
@@ -335,7 +335,7 @@ function renderTable(query, dataSource, population, populationDensity) {
         $table.append(`<thead>
                             <tr>
                                 <th>Date</th>
-                                <th>New<br/>Cases</th>"}
+                                <th>Cases</th>"}
                                 <th>Cumulative</th>"}
                                 <th>% Change</th>
                             </tr>
@@ -595,7 +595,7 @@ function combineGraphs($canva, arr$areas) {
 var sourcesRetrieving = setInterval(() => {
     if (sourcesRetrieved === sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
-        renderTable("L.A. County Covid Hospitalizations", window.laCountyHospitals, 19500);
+        renderTable("Los Angeles Covid Hospitalizations", window.laCountyHospitals, 19500);
         renderTable("Los Angeles", window.laCounty, 10.04 * 100000000, 2489); // 8564
         renderTable("California", window.laTimesCalifornia);
         renderTable("New York", window.cnnNewYork);
