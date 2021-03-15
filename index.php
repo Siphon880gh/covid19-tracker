@@ -28,12 +28,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!-- Meta tags for thumbnails, favico etc -->
+    <meta property='og:title' content="Covid19 Tracker" />
+    <meta property='og:image' content='https://wengindustry.com/tools/covid19/assets/icons/Icons8-Ios7-Healthcare-Virus--as-site-thumbnail.png' />
+    <meta property='og:description' content="Track Covid19 hospitalizations and casees in Los Angeles and select areas." />
+    <link rel="icon" href="assets/icons/Icons8-Ios7-Healthcare-Virus.ico">
+
     <!-- Bootstrap, Font-Awesome  -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
     <!-- Icons -->
-    <link rel="icon" href="assets/icons/Icons8-Ios7-Healthcare-Virus.ico">
 
     <!-- Site Assets -->
     <link rel="stylesheet" href="assets/css/index.css">
