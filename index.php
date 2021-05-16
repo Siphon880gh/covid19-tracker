@@ -47,7 +47,7 @@
     <body>
         <div class="container-alt">
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
-            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.</div>
+            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.<br/>5/15/21 Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom.</div>
             <div id="credits">
                 <span class="authored">By Weng Fei Fung</span>
             </div>
@@ -81,10 +81,13 @@
                         <div class="note"></div>
                         <div class="links"></div>
                         <div class="title" data-area=""></div>
-                        <div style="width: 100%; height: 100%">
+                        <div class="not-table" style="width: 100%; height: 100%">
                             <canvas class="js-graph"></canvas>
+                            <div class="reset-zoom-wrapper">
+                                <a onclick="$(event.target).data('ctx').resetZoom();" href="javascript:void(0)">Reset Zoom & Pan</a>
+                            </div>
                             <div class="math">
-                                <a onclick="event.preventDefault(); $(this).hide(); $(this).next().removeClass('hide');" href="#" style="float:right; margin:5px;">Show Prediction Model</a>
+                                <a onclick="event.preventDefault(); $(this).hide(); $(this).next().removeClass('hide');" href="javascript:void(0)" style="float:right; margin:5px;">Show Prediction Model</a>
                                 <div class="inner hide">
                                     <div class="formula"></div>
                                     <div class="population-line"></div>
@@ -224,6 +227,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
+    <!-- <script src="//npmcdn.com/Chart.Zoom.js@0.3.0/Chart.Zoom.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="//cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7/dist/chartjs-plugin-zoom.min.js"></script>
     
     <script><?php include("assets/js/index.js"); ?></script>
 

@@ -524,9 +524,32 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                         }
                     }
                 }]
+            },
+            pan: {
+                // Boolean to enable panning
+                enabled: true,
+    
+                // Panning directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow panning in the y direction
+                mode: 'xy',
+                
+                speed: 1
+            },
+    
+            // Container for zoom options
+            zoom: {
+                // Boolean to enable zooming
+                enabled: true,						
+                // Zooming directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow zooming in the y direction
+                mode: 'xy',
             }
         }
     });
+
+    // Resetable zoom level on click
+    var $resetButton = $parent.closest(".not-table").find(".reset-zoom-wrapper").children(1);
+    $resetButton.data("ctx", scatterChart);
 } // insertGraph
 
 function getRandomRgb() {
