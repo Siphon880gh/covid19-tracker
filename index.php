@@ -47,7 +47,7 @@
     <body>
         <div class="container-alt">
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
-            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.<br/>5/15/21 Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom.</div>
+            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.<br/>Updated 5/15/21: Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom. Full screen graphs option available on wide screens.</div>
             <div id="credits">
                 <span class="authored">By Weng Fei Fung</span>
             </div>
@@ -84,7 +84,9 @@
                         <div class="not-table" style="width: 100%; height: 100%">
                             <canvas class="js-graph"></canvas>
                             <div class="reset-zoom-wrapper">
-                                <a onclick="$(event.target).data('ctx').resetZoom();" href="javascript:void(0)">Reset Zoom & Pan</a>
+                                <a class="reset-btn" onclick="$(event.target).data('ctx').resetZoom();" href="javascript:void(0)">Reset Zoom & Pan</a>
+                                <span class="full-screen-btn-separator">&nbsp;|&nbsp;</span>
+                                <a class="full-screen-btn" onclick="var $this = $(event.target); var $graphWrapper = $this.closest('.not-table'), $graph=$graphWrapper.find('canvas'), $tile = $graphWrapper.closest('.area'); $graphWrapper.css('width', '90vw'); $graph.attr('width', '3000').attr('height', '1000'); $tile.get(0).scrollIntoView(); $this.prev().remove(); $this.remove();" href="javascript:void(0)">Full screen</a>
                             </div>
                             <div class="math">
                                 <a onclick="event.preventDefault(); $(this).hide(); $(this).next().removeClass('hide');" href="javascript:void(0)" style="float:right; margin:5px;">Show Prediction Model</a>

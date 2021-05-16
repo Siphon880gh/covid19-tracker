@@ -548,7 +548,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
     });
 
     // Resetable zoom level on click
-    var $resetButton = $parent.closest(".not-table").find(".reset-zoom-wrapper").children(1);
+    var $resetButton = $parent.closest(".not-table").find(".reset-zoom-wrapper").find(".reset-btn");
     $resetButton.data("ctx", scatterChart);
 } // insertGraph
 
