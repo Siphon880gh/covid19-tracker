@@ -55,6 +55,7 @@
     margin: 10px;
     padding: 5px;
     border: 1px solid black;
+    text-align: center;
 }
 
 .area .title {
@@ -203,4 +204,19 @@ tbody tr:nth-last-child(2) .doubling-time {
     width: 100%;
     max-height: calc(20 * 15px);
     overflow-y: scroll;
+}
+
+
+/* Graph Mode UI */
+
+.ui-graph-mode {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.p-sm-px {
+    padding: 3px;
 }

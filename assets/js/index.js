@@ -406,7 +406,23 @@ function renderTable(query, dataSource, population, populationDensity) {
                 ${TD_percentChange}
             </tr>
         `);
-        window.graphData.push({ x: unix, y: cumulativeCases });
+
+
+        // Prepare graph either cumulatively or non-cumulatively
+        var params = new URLSearchParams(window.location.search);
+        var defaultMode = "cumulative"; // predefined by developer
+        var mode = params.get("mode"); // mixed value vs null
+        var routedMode = defaultMode;
+        if(mode==="cumulative") {
+            routedMode = "cumulative";
+        } else if(mode==="noncumulative") {
+            routedMode = "noncumulative";
+        }
+        if(routedMode==="cumulative")
+            window.graphData.push({ x: unix, y: cumulativeCases });
+        else {
+            window.graphData.push({ x: unix, y: cases });
+        }
     });
 
     // Best fit lines
@@ -438,7 +454,7 @@ function renderTable(query, dataSource, population, populationDensity) {
         $populationDensity.html(populationDensityCalc);
     }
 
-    // Insert graph
+    // Insert graph (after rendering table)
     let selfData = [{
         label: 'Covid-19/Coronavirus Cases',
         data: window.graphData
@@ -477,6 +493,7 @@ function renderTable(query, dataSource, population, populationDensity) {
 } // renderTable
 
 function insertGraph($parent, datum) { // $DOM to insert, array of data
+    console.log("**insertGraph**", datum);
     var ctx = $parent[0].getContext("2d");
     // debugger;
     var scatterChart = new Chart(ctx, {
@@ -556,7 +573,7 @@ function zoomGraphs($canva, arr$areas) {
     let selfData = [];
 
     insertGraph($canva, graphs);
-}
+} // zoomGraphs
 
 function combineGraphs($canva, arr$areas) {
     let graphs = [];
