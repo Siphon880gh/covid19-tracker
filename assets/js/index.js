@@ -244,6 +244,11 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     window.sourcesRetrieved++;
 })(); // setjohnHopkinsCountries
 
+
+function covidBedInfo() {
+    alert("Los Angeles hospitals have about 19500 beds. Hospitals will be overwhelmed when Covid beds hit 11% assuming that nurses were overwhelmed at the end of November 2021. When overwhelmed, regular patients could suddenly turn Covid positive and ICU is full of ventilated patients. People passing from Covid will exceed ability to deliver the bodies and they will be placed in ice trucks. Hospitals will ask legislation to increase number of patients to nurses. Visitors wil likely be barred from visiting hospital.")
+}
+
 // Convert cumulative cases to breakdown cases
 function convertCumulativeCasesToBreakdownCases(areaObject) { // areaObject without the city/state/lat/long fields, so only the date fields
     var prevCumulativeCases = 0;
@@ -320,15 +325,16 @@ function renderTable(query, dataSource, population, populationDensity) {
     if (isHospitalBeds) {
         $table.append(`<thead>
                             <tr>
-                                <th>Date</th>
+                                <th></th>
                                 <th colspan='2'>Beds</th>
-                                <th>% Change</th>
+                                <th colspan='2'></th>
                             </tr>
                             <tr>
-                                <th></th>
+                                <th>Dates</th>
                                 <th>Change</th>
                                 <th>Total (Real-Time)</th>
-                                <th></th>
+                                <th>% Change</th>
+                                <th><a href="javascript:void(0)" onclick="covidBedInfo();">Covid Beds</a></th>
                             </tr>
                         </thead>`);
     } else {
@@ -370,13 +376,29 @@ function renderTable(query, dataSource, population, populationDensity) {
             return pc;
         }
 
+        let TD_hospitalBeds = "";
+        if(isHospitalBeds) {
+            let percentHospitalBeds = (cumulativeCases/19500 * 100);
+            let $td = $("<td/>");
+            $td.text(percentHospitalBeds.toFixed(2)+"%");
+            if(percentHospitalBeds<5) {
+                $td.css("background-color", "lightgreen");
+            } else if(percentHospitalBeds<9) {
+                $td.css("background-color", "lightyellow");
+            } else {
+                $td.css("background-color", "pink");
+            }
+            TD_hospitalBeds = $td[0].outerHTML;
+            // console.log(TD_hospitalBeds);
+        }
+
         let TD_percentChange = `<td style="background-color:lightgreen;">+ 0%</td>`; // default
         if (prevCumulativeCases > 0 && prevCumulativeCases !== cumulativeCases) {
             let percentChange = getPercentChangeFloat();
             let bgColor = "";
             if (percentChange >= 100) bgColor = "pink";
             else if (percentChange >= 75) bgColor = "#FED8B1;";
-            else if (percentChange >= 25) bgColor = "lightyellow";
+            else if (percentChange >= 50) bgColor = "lightyellow";
             else bgColor = "lightgreen";
             TD_percentChange = `<td class="percent-change" style="background-color:${bgColor};">${percentChange}%</td>`;
         }
@@ -404,6 +426,7 @@ function renderTable(query, dataSource, population, populationDensity) {
                 <td>${cases}</td>
                 <td>${cumulativeCases} ${nowDoubled}</td>
                 ${TD_percentChange}
+                ${TD_hospitalBeds}
             </tr>
         `);
 
