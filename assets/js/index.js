@@ -658,6 +658,7 @@ function combineGraphs($canva, arr$areas) {
 var sourcesRetrieving = setInterval(() => {
     if (sourcesRetrieved === sourcesAllRetrieved) {
         clearInterval(sourcesRetrieving);
+        $("#areas").html(""); // Remove loading spindle
         renderTable("Los Angeles Covid Hospitalizations", window.laCountyHospitals, 19500);
         renderTable("Los Angeles", window.laCounty, 10.04 * 100000000, 2489); // 8564
         renderTable("California", window.laTimesCalifornia);

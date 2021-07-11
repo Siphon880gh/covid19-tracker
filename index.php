@@ -31,7 +31,7 @@
     <!-- Meta tags for thumbnails, favico etc -->
     <meta property='og:title' content="Covid19 Tracker" />
     <meta property='og:image' content='https://wengindustry.com/tools/covid19/assets/icons/Icons8-Ios7-Healthcare-Virus--as-site-thumbnail.png' />
-    <meta property='og:description' content="Track Covid19 hospitalizations and casees in Los Angeles and select areas." />
+    <meta property='og:description' content="Track Covid19 hospitalizations and cases in Los Angeles and select areas." />
     <link rel="icon" href="assets/icons/Icons8-Ios7-Healthcare-Virus.ico">
 
     <!-- Bootstrap, Font-Awesome  -->
@@ -76,7 +76,12 @@
             ?>
             </div>
 
-            <div id="areas"></div>
+            <div id="areas">
+                <div style="font-size:2.5rem;">
+                    <i class="fa fa-spinner fa-pulse"></i>
+                    <span>Loading</span>
+                </div>
+            </div>
 
             <template id="template-table">
                 <div class="area">
