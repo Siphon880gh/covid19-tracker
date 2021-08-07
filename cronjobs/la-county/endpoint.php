@@ -74,7 +74,7 @@ if(isset($_GET["manual"])) {
 }
 
 // Success
-echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA County Public Health, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get()]);
+echo json_encode(["success"=>"Cron job ran to get today's cumulative cases from LA County Public Health, and then appended to the daily cumulative cases for the app.", "php.time"=>date("m/d/Y H:i:s"), "todaysCumulativeCases"=> $todaysCumulativeCases, "php.timezone"=>date_default_timezone_get()]);
 die();
 
 echo "<br/><br/>";
