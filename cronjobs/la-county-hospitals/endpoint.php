@@ -17,8 +17,12 @@
 // $leftToken = "Laboratory Confirmed Cases (LCC)";
 // $rightToken = "</tr>";
 $source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js";
-$leftToken = "hospitalizations";
-$rightToken = "var content";
+
+
+$leftToken = '"hospitalizations": "';
+$rightToken ='",';
+// $leftToken = "hospitalizations";
+// $rightToken = "var content";
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
 require("../includes/phpQuery/phpQuery.php");
@@ -53,6 +57,7 @@ function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
 // Get today's cumulative cases
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_sandwiched_inner_text($view_source, $leftToken, $rightToken);
+var_dump(["debug_parsed"=>$todaysCumulativeCases]);
 $todaysCumulativeCases = intval($todaysCumulativeCases);
 // var_dump($view_source);
 if($todaysCumulativeCases===0) die();

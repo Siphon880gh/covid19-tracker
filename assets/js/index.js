@@ -66,6 +66,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
         area = filename.replace(".json", "");
         arr2.push({ area: area, dates: arr[filename] });
     });
+    console.log("Debug filename for overriding: " + JSON.stringify(arr2));
     window.overrides = arr2;
     console.log("overrides [ { area, dates {} }, ... ]", window.overrides);
     window.sourcesRetrieved++;
