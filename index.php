@@ -48,8 +48,11 @@
         <div class="container-alt">
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
             <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.
-            <br/>Updated 5/15/21: Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom. Full screen graphs option available on wide screens.
+            <br/>
+            <br/>Updated 1/6/22: It's clear that Covid is lasting years, so I changed the X axis date format from MM/DD to MM/DD/YY.
             <br/>Updated 7/11/21: Now with Covid beds column.
+            <br/>Updated 5/15/21: Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom. Full screen graphs option available on wide screens.
+
         </div>
             <div id="credits">
                 <span class="authored">By Weng Fei Fung</span>

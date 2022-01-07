@@ -530,7 +530,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                 callbacks: {
                     title(datasets) {
                         var time = new Date(datasets[0].xLabel * 1000);
-                        return (time.getMonth() + 1) + '/' + time.getDate()
+                        return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear()
                     }
                 }
             },
@@ -544,7 +544,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                         callback(value) {
                             if (isNaN(value)) return 0;
                             var time = new Date(value * 1000);
-                            return (time.getMonth() + 1) + '/' + time.getDate();
+                            return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear();
                         }
                     }
                 }]
