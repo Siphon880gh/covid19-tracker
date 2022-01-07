@@ -221,17 +221,17 @@
                 </div> <!--/ dialog -->
             </div> <!--/ modal -->
 
-            <div id="nav-global-mobile-toggle" style="position:absolute; top:0; right: 10px; z-index:1;">
-                <a href="javascript:void(0)" onclick='$("#nav-global").css("right", "10px");'><</a>
+            <div id="nav-global-a" style="position:absolute; top:0; right: 10px; z-index:1; background-color:white;">
+                <a href="javascript:void(0)" onclick='$("#nav-global-b").css("display", "block");'><</a>
             </div>
 
-            <div id="nav-global" style="position:absolute; top:0; right:-100%; z-index:2; background-color:white;">
+            <div id="nav-global-b" style="position:absolute; top:0; right: 10px; display:none; z-index:2; background-color:white;">
                 <label for="more-graphs">More Graphs:</label>
                     <select id="more-graphs">
                         <option value=""></option>
                     </select>
                     <span>&nbsp;</span>
-                    <a href="javascript:void(0)" onclick='$("#nav-global").css("right", "-100%");'>></a>
+                    <a href="javascript:void(0)" onclick='$("#nav-global-b").css("display", "none");'>></a>
             </div>
 
     <!-- jQuery, Bootstrap, Moment JS, Chart JS, Regression, index.js -->
