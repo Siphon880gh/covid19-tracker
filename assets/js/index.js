@@ -1,3 +1,5 @@
+window.laHospitalBedCount = 19500
+
 // TODO:
 // class DataSourcePicker{ 
 //     constructor {
@@ -379,8 +381,8 @@ function renderTable(query, dataSource, population, populationDensity) {
 
         let TD_hospitalBeds = "";
         if(isHospitalBeds) {
-            let percentHospitalBeds = (cumulativeCases/19500 * 100);
-            let $td = $("<td/>");
+            let percentHospitalBeds = (cumulativeCases/window.laHospitalBedCount * 100);
+            let $td = $("<td class='covid-beds-fraction'><td/>");
             $td.text(percentHospitalBeds.toFixed(2)+"%");
             if(percentHospitalBeds<5) {
                 $td.css("background-color", "lightgreen");
@@ -422,7 +424,7 @@ function renderTable(query, dataSource, population, populationDensity) {
         var date = moment(date).format("MM/DD/YY");
         let dayOfWeek = moment(date).format("ddd");
         $tbody.prepend(`
-            <tr>
+            <tr data-index="${i}">
                 <td data-unix="${unix}">${date} ${dayOfWeek}</td>
                 <td>${cases}</td>
                 <td>${cumulativeCases} ${nowDoubled}</td>
@@ -518,6 +520,7 @@ function renderTable(query, dataSource, population, populationDensity) {
 
 function insertGraph($parent, datum) { // $DOM to insert, array of data
     console.log("**insertGraph**", datum);
+    // window.currentGraphing = 
     var ctx = $parent[0].getContext("2d");
     // debugger;
     var scatterChart = new Chart(ctx, {
@@ -528,9 +531,18 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
         options: {
             tooltips: {
                 callbacks: {
-                    title(datasets) {
-                        var time = new Date(datasets[0].xLabel * 1000);
-                        return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear()
+                    title(point) {
+                        let areaTitle = $(this._active[0]._chart.canvas).closest(".area").find(".title").text()
+                        var time = new Date(point[0].xLabel * 1000);
+                        var i = point[0].index;
+                        var extraInfo = "";
+                        if(areaTitle.toLowerCase().indexOf("hospitalizations")>-1) {
+                            debugger;
+                            var percentCovidBeds = $(this._active[0]._chart.canvas).closest(".area").find(`tr[data-index="${i}"]`).find(".covid-beds-fraction").text()
+                            extraInfo = "\nCovid Beds: " + percentCovidBeds;
+                        }
+
+                        return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear() + extraInfo;
                     }
                 }
             },
