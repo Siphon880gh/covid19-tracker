@@ -542,7 +542,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                             extraInfo = "\nCovid Beds: " + percentCovidBeds;
                         }
 
-                        return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear() + extraInfo;
+                        return (time.getMonth() + 1) + '/' + time.getDate() + '/' + (time.getYear() + "").substr(-2) + extraInfo;
                     }
                 }
             },
@@ -556,7 +556,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                         callback(value) {
                             if (isNaN(value)) return 0;
                             var time = new Date(value * 1000);
-                            return (time.getMonth() + 1) + '/' + time.getDate() + '/' + time.getYear();
+                            return (time.getMonth() + 1) + '/' + (time.getYear() + "").substr(-2) + '/' + time.getYear();
                         }
                     }
                 }]
