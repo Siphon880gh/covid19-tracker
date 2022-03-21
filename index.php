@@ -49,6 +49,7 @@
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
             <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.
             <br/>
+            <br/>Note 2/27/2022: there will be no reporting on Sundays per LA County.
             <br/>Updated 1/9/22: Covid beds percent shows when hovering mouse cursor over a graph point.
             <br/>Updated 1/6/22: It's clear that Covid is lasting years, so I changed the X axis date format from MM/DD to MM/DD/YY.
             <br/>Updated 7/11/21: Now with Covid beds column.
