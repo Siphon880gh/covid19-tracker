@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+ini_set('display_errors', '1');
 /**
  * Problem: The data source we are using is LA County Public Health. They do not have a public API that breaks down the number of cases 
  * daily in a table. But they do show a counter of cumulative cases that updates daily. 
@@ -12,11 +14,13 @@
  * 
  */
 
+// BEFORE 4/4/2023
 // Init
 // $source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
 // $leftToken = "Laboratory Confirmed Cases (LCC)";
 // $rightToken = "</tr>";
-$source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js";
+// $source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js"; // Before 4/4/23
+$source = "http://publichealth.lacounty.gov/media/Coronavirus/json/covid19_location_casecounter.json";
 
 
 $leftToken = '"hospitalizations": "';
@@ -24,7 +28,6 @@ $rightToken ='",';
 // $leftToken = "hospitalizations";
 // $rightToken = "var content";
 $dailyCumulativePath = "data/daily-cumulative.json";
-error_reporting(E_ALL ^ E_DEPRECATED);
 require("../includes/phpQuery/phpQuery.php");
 
 // HELPERS
@@ -40,6 +43,11 @@ function get_view_source($url) {
 	return $data;
 }
 
+
+
+// AFTER 4/4/23
+// LA County's website now is JSON based rather than manually edited in javascript js file's case numbers. 
+/*
 function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
 	// look for a string left of the number
 	$a = strpos($view_source, $leftToken);
@@ -53,12 +61,25 @@ function get_sandwiched_inner_text($view_source, $leftToken, $rightToken) {
 	$partial = preg_replace("/[^0-9]{1,}/m", "", $partial);
 	return $partial;
 } 
+*/
+
+function get_from_json($source, $key) {
+	$val = $source[$key];
+	return $val;
+}
 
 // Get today's cumulative cases
 $view_source = get_view_source($source);
-$todaysCumulativeCases = get_sandwiched_inner_text($view_source, $leftToken, $rightToken);
-var_dump(["debug_parsed"=>$todaysCumulativeCases]);
+
+// After 4/4
+// $todaysCumulativeCases = get_sandwiched_inner_text($view_source, $leftToken, $rightToken);
+$json = json_decode($view_source, true);
+$todaysCumulativeCases = get_from_json($json, "hospitalizations");
+// var_dump($json);
+// die();
+// var_dump(["debug_parsed"=>$todaysCumulativeCases]);
 $todaysCumulativeCases = intval($todaysCumulativeCases);
+
 // var_dump($view_source);
 if($todaysCumulativeCases===0) die();
 

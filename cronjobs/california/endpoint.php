@@ -39,7 +39,7 @@ function get_view_source($url) {
 function get_todays_cumulative($view_source) {
 	global $selector;
     $doc = phpQuery::newDocument($view_source);
-	$todays_cases_cumulative = $doc[$selector]->text();
+	$todays_cases_cumulative = $doc[$selector]->text(); //$(".big-mumber).tex() // document.querySelector(".big-number").textContent
 	$todays_cases_cumulative = str_replace(",", "", $todays_cases_cumulative);
     $todays_cases_cumulative = intval($todays_cases_cumulative);
     return $todays_cases_cumulative;
