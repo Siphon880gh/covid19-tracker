@@ -1,0 +1,575 @@
+[26-Mar-2023 15:00:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[26-Mar-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 00:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 01:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 02:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 04:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 20:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 21:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[27-Mar-2023 23:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 22:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[28-Mar-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[29-Mar-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 04:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[30-Mar-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 01:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 04:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[31-Mar-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 21:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[01-Apr-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 00:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 20:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[02-Apr-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 00:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 01:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 02:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[03-Apr-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 00:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 01:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 02:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 04:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 20:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 22:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29
+[04-Apr-2023 23:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php(54): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county/endpoint.php on line 29

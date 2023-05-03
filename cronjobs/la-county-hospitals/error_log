@@ -1,0 +1,417 @@
+[26-Mar-2023 06:59:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[26-Mar-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[26-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[26-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[26-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[27-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 15:59:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[28-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[29-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[30-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 06:59:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[31-Mar-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[01-Apr-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 06:59:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[02-Apr-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[03-Apr-2023 22:59:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 03:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 04:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 05:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 06:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 17:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 19:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 22:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 23:22:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 23:33:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 23:33:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php:33
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php(58): get_view_source('http://publiche...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 33
+[04-Apr-2023 23:59:43 UTC] PHP Warning:  Illegal string offset 'hospializations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:00:39 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:00:40 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:01:10 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:01:46 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:01:48 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:01:49 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:02:26 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:04:25 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:04:27 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:04:54 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:04:56 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:04:56 UTC] PHP Warning:  Illegal string offset 'hospitalizations' in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 67
+[05-Apr-2023 00:05:15 UTC] PHP Notice:  Undefined variable: todaysCumulativeCases in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 81
+[05-Apr-2023 00:05:29 UTC] PHP Notice:  Undefined variable: todaysCumulativeCases in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 81
+[05-Apr-2023 00:05:30 UTC] PHP Notice:  Undefined variable: todaysCumulativeCases in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 81
+[05-Apr-2023 00:05:47 UTC] PHP Notice:  Undefined variable: todaysCumulativeCases in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/la-county-hospitals/endpoint.php on line 81

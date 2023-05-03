@@ -1,0 +1,386 @@
+[26-Mar-2023 15:00:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[26-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[26-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[26-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[27-Mar-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[27-Mar-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[27-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[27-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[27-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[28-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[28-Mar-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[28-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[28-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[28-Mar-2023 22:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[29-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[29-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[29-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[29-Mar-2023 19:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[29-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[30-Mar-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[30-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[30-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[30-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[30-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[31-Mar-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[31-Mar-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[31-Mar-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[31-Mar-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[31-Mar-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[01-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[01-Apr-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[01-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[01-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[01-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[02-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[02-Apr-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[02-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[02-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[02-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[03-Apr-2023 03:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[03-Apr-2023 15:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[03-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[03-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[03-Apr-2023 22:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[04-Apr-2023 03:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[04-Apr-2023 15:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[04-Apr-2023 17:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[04-Apr-2023 19:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[04-Apr-2023 22:00:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php:29
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php(49): get_view_source('https://www.lat...')
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/california/endpoint.php on line 29
+[05-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21256752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[05-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21256752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[05-Apr-2023 17:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21256752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[05-Apr-2023 19:00:05 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21271512 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[05-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21271512 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[06-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21271512 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[06-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21271512 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[06-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21271512 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[06-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21286328 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[06-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21298888 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[07-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21298888 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[07-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21298888 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[07-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21298888 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[07-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21313648 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[07-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21313648 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[08-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21313648 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[08-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21313648 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[08-Apr-2023 17:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21313648 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[08-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21327808 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[08-Apr-2023 22:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21327920 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[09-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21327920 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[09-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21327920 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[09-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21327920 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[09-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21343664 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[09-Apr-2023 22:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21343664 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[10-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21343664 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[10-Apr-2023 15:00:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21343664 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[10-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21343664 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[10-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21358232 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[10-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21358232 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[11-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21358232 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[11-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21358232 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[11-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21358232 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[11-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21372832 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[11-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21372832 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[12-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21372832 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[12-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21372832 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[12-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21372832 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[12-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21387928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[12-Apr-2023 22:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21387928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[13-Apr-2023 03:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21387928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[13-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21387928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[13-Apr-2023 17:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21387928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[13-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21402952 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[13-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21415608 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[14-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21415608 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[14-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21415608 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[14-Apr-2023 17:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21415608 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[14-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21430000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[14-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21430000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[15-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21430000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[15-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21430000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[15-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21430000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[15-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21444904 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[15-Apr-2023 22:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21444952 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[16-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21444952 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[16-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21444952 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[16-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21444952 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[16-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21460072 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[16-Apr-2023 22:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21460072 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[17-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21460072 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[17-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21460072 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[17-Apr-2023 17:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21460072 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[17-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[17-Apr-2023 22:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[18-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[18-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[18-Apr-2023 17:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[18-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[18-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[19-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[19-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[19-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21474696 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[19-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21504336 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[19-Apr-2023 22:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21504336 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[20-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21504336 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[20-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21504336 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[20-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21504336 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[20-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21519240 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[20-Apr-2023 22:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21531928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[21-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21531928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[21-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21531928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[21-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21531928 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[21-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21546864 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[21-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21546864 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[22-Apr-2023 03:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21546864 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[22-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21546864 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[22-Apr-2023 17:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21546864 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[22-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21547680 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[22-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21547768 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[23-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21547768 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[23-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21547768 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[23-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21547768 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[23-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21576448 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[23-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21576448 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[24-Apr-2023 03:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21576448 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[24-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21576448 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[24-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21576448 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[24-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21591024 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[24-Apr-2023 22:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21591024 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[25-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21591024 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[25-Apr-2023 15:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21591024 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[25-Apr-2023 17:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21591024 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[25-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21606008 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[25-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21606008 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[26-Apr-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21606008 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[26-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21606008 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[26-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21606008 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[26-Apr-2023 19:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621016 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[26-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621016 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[27-Apr-2023 03:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621016 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[27-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621016 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[27-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621016 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[27-Apr-2023 19:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21621752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[27-Apr-2023 22:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21634368 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[28-Apr-2023 03:00:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21634368 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[28-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21634368 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[28-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21634368 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[28-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21662672 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[28-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21662672 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[29-Apr-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21662672 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[29-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21662672 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[29-Apr-2023 17:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21662672 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[29-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21677608 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[29-Apr-2023 22:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21677752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[30-Apr-2023 03:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21677752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[30-Apr-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21677752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[30-Apr-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21677752 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[30-Apr-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21693272 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[30-Apr-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21693272 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[01-May-2023 03:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21693272 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[01-May-2023 15:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21693272 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[01-May-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21693272 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[01-May-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21708000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[01-May-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21708000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[02-May-2023 03:00:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21708000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[02-May-2023 15:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21708000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[02-May-2023 17:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21708000 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[02-May-2023 19:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21722688 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[02-May-2023 22:00:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21722688 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402
+[03-May-2023 03:00:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 21722688 bytes) in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/includes/phpQuery/phpQuery/DOMDocumentWrapper.php on line 402

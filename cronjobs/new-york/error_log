@@ -1,0 +1,385 @@
+[25-Mar-2023 23:59:02 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[26-Mar-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[27-Mar-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 08:59:02 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[28-Mar-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[29-Mar-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[30-Mar-2023 23:59:02 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[31-Mar-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[01-Apr-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[02-Apr-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 15:59:02 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 20:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 21:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 22:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[03-Apr-2023 23:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[04-Apr-2023 08:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[04-Apr-2023 10:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[04-Apr-2023 12:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51
+[04-Apr-2023 15:59:01 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php:51
+Stack trace:
+#0 /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php(67): getTodaysCumulativeCases()
+#1 {main}
+  thrown in /home/bse7iy70lkjz/public_html/tools/covid19/cronjobs/new-york/endpoint.php on line 51

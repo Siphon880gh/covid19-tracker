@@ -537,7 +537,7 @@ function insertGraph($parent, datum) { // $DOM to insert, array of data
                         var i = point[0].index;
                         var extraInfo = "";
                         if(areaTitle.toLowerCase().indexOf("hospitalizations")>-1) {
-                            debugger;
+                            // debugger;
                             var percentCovidBeds = $(this._active[0]._chart.canvas).closest(".area").find(`tr[data-index="${i}"]`).find(".covid-beds-fraction").text()
                             extraInfo = "\nCovid Beds: " + percentCovidBeds;
                         }
