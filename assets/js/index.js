@@ -141,7 +141,7 @@ const csvToJson = (str, headerList, quotechar = '"', delimiter = ',') => {
     // {dates...} => conformedObject { area, title, dates {} }
     window.laCounty = [{
         area: "Los Angeles", // must match name passed by renderTable
-        title: "Los Angeles Population", // Render title top of graph
+        title: "Los Angeles Covid Cases", // Render title top of graph
         dates: arr
     }];
 

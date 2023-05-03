@@ -68,8 +68,10 @@
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
             <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.
             <br/>
-            <br/>Note 3/16/2023: LA County numbers are now reported every Thursday rather than daily.
-            <br/>Note 2/27/2022: there will be no reporting on Sundays per LA County.
+            <br/>- Note 4/18/2023: LA County Public Health are now reporting Covid every week instead of daily. Graphs and charts adjusted accordingly.
+            <br/>- Note 3/16/2023: LA County Public Health is relaxing reporting requirements. Hospitals are to report Covid in-patient numbers every ~Thursday instead of daily. Graphs and charts adjusted accordingly from daily to weekly.
+            <br/>- Note 3/10/2023: John Hopkins University stopped collecting Covid case data for states and countries because of the waning pandemic. Have not adjusted to new data sources. May do so if there is public interest. Graphs and charts appear paused and will update as long as John Hopkins occasionally update their data.
+            <br/>- Note 2/27/2022: No more reporting on Sundays for LA County.
             <br/><div class="toggle-updates-list a">
     
                 <span class="press-toggle-update-list"
@@ -79,11 +81,11 @@
 
                 <div class="child-toggle-update-list">
 
-                    <br/>Note 2/27/2022: there will be no reporting on Sundays per LA County.
-                    <br/>Updated 1/9/22: Covid beds percent shows when hovering mouse cursor over a graph point.
-                    <br/>Updated 1/6/22: It's clear that Covid is lasting years, so I changed the X axis date format from MM/DD to MM/DD/YY.
-                    <br/>Updated 7/11/21: Now with Covid beds column.
-                    <br/>Updated 5/15/21: Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom. Full screen graphs option available on wide screens.
+                    <br/>- Note 2/27/2022: There will be no reporting on Sundays per LA County.
+                    <br/>- Updated 1/9/22: Covid beds percent shows when hovering mouse cursor over a graph point.
+                    <br/>- Updated 1/6/22: It's clear that Covid is lasting years, so I changed the X axis date format from MM/DD to MM/DD/YY.
+                    <br/>- Updated 7/11/21: Now with Covid beds column.
+                    <br/>- Updated 5/15/21: Now with cumulative/non-cumulative graph views and panning/zooming ability. Hold SHIFT and drag to pan. Use gestures/mouse to zoom. Full screen graphs option available on wide screens.
                 </div>
         
             </div>
@@ -282,7 +284,7 @@
     <script><?php include("assets/js/index.js"); ?></script>
     <script src="append-display/index.js"></script>
 
-    <div class="source" style="margin-top:10px;"><a href="javascript:void()" onclick="$(this).next().toggle();">Data collection notes.</a><span style="display:none;"> Los Angeles reflects all of Los Angeles county including Hollywood, Lincoln Heights, Long Beach, Monterey Park, Pasadena, etc. 7/3/20-7/5/20 do not have reported numbers from LA County because their reporting system was down to improve it. Other Los Angeles notes: Monday/Tuesday numbers tend to spike up as weekend results catch up. Notes on New York: The stats can come in as late as 1AM EST next day. General Notes: Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></div>
+    <div class="source" style="margin-top:10px;"><a href="javascript:void()" onclick="$(this).next().toggle();">Data collection notes.</a><span style="display:none;"> <i>Note these notes apply back when the Covid collection results by agencies were daily.</i> Los Angeles reflects all of Los Angeles county including Hollywood, Lincoln Heights, Long Beach, Monterey Park, Pasadena, etc. 7/3/20-7/5/20 do not have reported numbers from LA County because their reporting system was down to improve it. Other Los Angeles notes: Monday/Tuesday numbers tend to spike up as weekend results catch up. Notes on New York: The stats can come in as late as 1AM EST next day. General Notes: Data automatically pulled on a daily basis from Los Angeles County Public Health, LA Times, and John Hopkins University. There are some differences in how LA County and John Hopkins report numbers so during the early days California numbers are 0 while Los Angeles numbers are 0-4 but that does not highly impact the graph or cumulative cases. John Hopkins University has stopped reporting county level numbers since 3/10/20, hence I added Los Angeles Public Health as a daily source of data to pull from. On 3/24/20, John Hopkins Universty has stopped reporting at a state level, so state information is no longer available on 3/24/20 and onwards, so we have to refer to the US table. Data is updated everyday at 8am, 10am, 12pm, 3pm, 5pm, and 8pm PST. If you know a website or API updating the number of cases for your county / state / province / country / region, you can contact me to have my app pull from their info daily, but please keep in mind that it costs bandwidth on my server.</span></div>
 
     </body>
 </html>

@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 /**
  * Problem: The data source we are using is LA County Public Health. They do not have a public API that breaks down the number of cases 
  * daily in a table. But they do show a counter of cumulative cases that updates daily. 
@@ -16,9 +19,19 @@
 // $source = "http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"; // Protocol must match http:// on their website as of 3/20/20
 // $leftToken = "Laboratory Confirmed Cases (LCC)";
 // $rightToken = "</tr>";
-$source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js";
-$leftToken = "count";
-$rightToken = "death";
+
+// Around March 2023, they have downsetted this dataset structure:
+// $source = "http://publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js";
+// $leftToken = "count";
+// $rightToken = "death";
+
+// Around March 2023, they have adopted this new dataset structure:
+$source = "http://publichealth.lacounty.gov/media/Coronavirus/json/covid19_location_casecounter.json";
+$leftToken = "-- Los Angeles County (excl. LB and Pas)</td><td>";
+$rightToken = "</td></tr>";
+// Their front-viewing side, particularly row "Laboratory Confirmed Cases", is
+// http://publichealth.lacounty.gov/media/Coronavirus/locations.htm#case-summary
+
 $dailyCumulativePath = "data/daily-cumulative.json";
 error_reporting(E_ALL ^ E_DEPRECATED);
 require("../includes/phpQuery/phpQuery.php");
