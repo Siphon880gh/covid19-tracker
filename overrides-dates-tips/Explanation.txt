@@ -1,0 +1,26 @@
+Problems:
+- The live data may be incorrect. You can override the dates with case numbers to adjust the cumulative cases.
+- You may want to add links for specific areas.
+
+Solution:
+
+# Json filename convention
+In overrides-data/, you want .json files named after the titles, for example: Los Angeles, California, or Italy. These titles appear at the top of the graphs. It does not have to be completely spelled out. Partial searches will be done for these files, then their json content will be applied over the live data points.
+
+# Json content
+
+{
+    "3/18/20": 46,
+    "3/17/20": 33,
+    "urls": [
+        "http://publichealth.lacounty.gov/media/Coronavirus/",
+        "https://twitter.com/lapublichealth"
+    ]
+}
+
+Those dates are overridden by your inputted correct case numbers. The dates must be spelled exactly like they appear on the date column in the table. The number is the number of cases broken down, not the cumulative cases, even if the online data source we are pulling from reports daily cumulative cases. Just think of this number as replacing the breakdown cases column on the table.
+
+
+# Adding further notes
+
+At overrides-data/, only all .json files named after an area's name (which is a key in the data sources) are looked into. So you can add text files of same names if you want to write down notes for that area.

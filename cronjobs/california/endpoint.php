@@ -45,9 +45,17 @@ function get_todays_cumulative($view_source) {
     return $todays_cases_cumulative;
 }
 
+/*
+ * After 6/7/23, California decided to no longer report cumulative number, but instead report cases since previous report.
+ */
+function adjust_todays_cumulative($cases) {
+	return parse_int($cases) + 12163750;
+}
+
 // Get today's cumulative cases
 $view_source = get_view_source($source);
 $todaysCumulativeCases = get_todays_cumulative($view_source);
+$todaysCumulativeCases = adjust_todays_cumulative($todaysCumulativeCases);
 // var_dump($todaysCumulativeCases);
 if($todaysCumulativeCases===0) {
 	echo json_encode(["error"=>"Is 0.", "php.time"=>date("m/d/Y H:i:s"), "php.timezone"=>date_default_timezone_get(), "parsed.\$todaysCumulativeCases"=>$todaysCumulativeCases]);
