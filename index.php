@@ -66,8 +66,10 @@
     <body>
         <div class="container-alt">
             <div id="title">Daily Covid-19 Tracking <i class="fas fa-first-aid"></i></div>
-            <div id="desc" style="margin-top:20px;">Quick snapshots of the Covid crisis in the hospitals and the population. Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>.
-            <br/>
+            <div id="desc" style="margin-top:20px;">By <a target="_blank" href="https://www.linkedin.com/in/weng-fung/">Weng Fei Fung (Weng)</a>. Quick snapshots of the Covid crisis in the hospitals and the population.<!-- Want to request an area? <a href="mailto:weffung@ucdavis.edu">Contact me</a>. --><br/>
+            My code scrapes and accumulates the information, then visualizes them into charts. You can see the code at <a href="https://github.com/Siphon880gh/covid19-tracker" target="_blank">my Github Repo.</a><br/>
+
+            <br/> In 2024, many agencies have stopped reporting Covid cases. To save costs, I have stopped the scraper from running.
             <br/>- Note 4/18/2023: LA County Public Health are now reporting Covid every week instead of daily. Graphs and charts adjusted accordingly.
             <br/>- Note 3/16/2023: LA County Public Health is relaxing reporting requirements. Hospitals are to report Covid in-patient numbers every ~Thursday instead of daily. Graphs and charts adjusted accordingly from daily to weekly.
             <br/>- Note 3/10/2023: John Hopkins University stopped collecting Covid case data for states and countries because of the waning pandemic. Have not adjusted to new data sources. May do so if there is public interest. Graphs and charts appear paused and will update as long as John Hopkins occasionally update their data.
